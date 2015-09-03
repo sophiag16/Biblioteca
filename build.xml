@@ -15,8 +15,11 @@
                 <pathelement location="out"/>
             </classpath>
 
-            <test fork="yes" name = "com.thoughtworks.geometry2.LineTest" haltonfailure="no" outfile="result">
-            </test>
+            <batchtest fork="yes">
+                <fileset dir="test">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
         </junit>
     </target>
 
