@@ -15,7 +15,17 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(byteArrayOutputStream));
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
         bibliotecaApp.start();
-        assertEquals("Welcome to Biblioteca", byteArrayOutputStream.toString());
+        assertEquals("Welcome to Biblioteca", byteArrayOutputStream.toString().split("\n")[0]);
+        System.setOut(null);
+    }
+
+    @Test
+    public void shouldDisplayListOfBooks() {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(byteArrayOutputStream));
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        bibliotecaApp.start();
+        assertEquals("Harry Potter, To Kill A Mockingbird, A History Of Time", byteArrayOutputStream.toString().split("\n")[1]);
         System.setOut(null);
     }
 }
