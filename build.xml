@@ -1,0 +1,56 @@
+<?xml version = "1.0"?>
+
+<project name = "Biblioteca2" default = "runjUnit" basedir=".">
+
+    <property name = "project.name" value="Biblioteca2" />
+    <property name = "main.name" value="BibliotecaApp" />
+    <property name = "package.name" value="com.tw.biblioteca" />
+
+    <target name="runjUnit" depends="build">
+        <junit printsummary="yes" haltonfailure="true">
+            <classpath>
+                <pathelement location="lib/junit-4.12.jar"/>
+                <pathelement location="lib/hamcrest-core-1.3.jar"/>
+                <pathelement location="lib/mockito-all-1.9.5.jar"/>
+                <pathelement location="out"/>
+            </classpath>
+
+            <test fork="yes" name = "com.thoughtworks.geometry2.LineTest" haltonfailure="no" outfile="result">
+            </test>
+        </junit>
+    </target>
+
+    <target name="build" depends="clean">
+        <mkdir dir="out"/>
+        <javac destdir="out">
+            <src path="src;test"/>
+            <classpath location="lib/junit-4.12.jar"/>
+            <classpath location="lib/hamcrest-core-1.3.jar"/>
+            <classpath location="lib/mockito-all-1.9.5.jar"/>
+        </javac>
+    </target>
+
+    <target name="build-jar" depends="build">
+        <jar destfile="lib/${project.name}.jar"
+             basedir="out"
+             excludes="**/Test.class">
+            <manifest>
+                <attribute name="Main-Class" value="${package.name}.${main.name}"/>
+            </manifest>
+
+        </jar>
+    </target>
+
+    <target name="run" depends="build-jar">
+        <java fork="true" failonerror="yes" classname="${package.name}.${main.name}">
+            <classpath>
+                <path location="lib/${project.name}.jar"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean" description="clean previous output directory">
+        <delete dir="out"/>
+    </target>
+
+</project>
