@@ -1,6 +1,6 @@
 <?xml version = "1.0"?>
 
-<project xmlns:jacoco="antlib:org.jacoco.ant" name = "Biblioteca2" default = "runjUnit" basedir=".">
+<project xmlns:jacoco="antlib:org.jacoco.ant" name = "Biblioteca2" default = "report" basedir=".">
 
     <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
         <classpath path="lib/jacocoant.jar"/>
