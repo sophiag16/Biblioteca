@@ -25,7 +25,13 @@ public class BibliotecaAppTest {
         System.setOut(new PrintStream(byteArrayOutputStream));
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
         bibliotecaApp.start();
-        assertEquals("Harry Potter, To Kill A Mockingbird, A History Of Time", byteArrayOutputStream.toString().split("\n")[1]);
+        assertEquals("Name \tAuthor \tYear of Publishing\n" +
+                "Harry Potter \tJ K Rowling \t2001\n" +
+                "To Kill A Mockingbird \tHarper Lee \t1970\n" +
+                "A Brief History Of Time \tStephen Hawking \t1988", byteArrayOutputStream.toString().split("\n")[1] + "\n" +
+                                                                    byteArrayOutputStream.toString().split("\n")[2] + "\n" +
+                                                                    byteArrayOutputStream.toString().split("\n")[3] + "\n" +
+                                                                    byteArrayOutputStream.toString().split("\n")[4]);
         System.setOut(null);
     }
 }

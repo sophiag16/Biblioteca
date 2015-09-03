@@ -1,13 +1,18 @@
 <?xml version = "1.0"?>
 
-<project name = "Biblioteca2" default = "runjUnit" basedir=".">
+<project xmlns:jacoco="antlib:org.jacoco.ant" name = "Biblioteca2" default = "runjUnit" basedir=".">
+
+    <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+        <classpath path="lib/jacocoant.jar"/>
+    </taskdef>
 
     <property name = "project.name" value="Biblioteca2" />
     <property name = "main.name" value="BibliotecaApp" />
     <property name = "package.name" value="com.tw.biblioteca" />
 
     <target name="runjUnit" depends="build">
-        <junit printsummary="yes" haltonfailure="true">
+        <jacoco:coverage destfile="./out/jacoco.exec">
+        <junit printsummary="yes" haltonfailure="true" fork="true">
             <classpath>
                 <pathelement location="lib/junit-4.11.jar"/>
                 <pathelement location="lib/hamcrest-core-1.3.jar"/>
@@ -21,6 +26,25 @@
                 </fileset>
             </batchtest>
         </junit>
+        </jacoco:coverage>
+    </target>
+
+    <target name="report" depends="runjUnit">
+        <jacoco:report>
+            <executiondata>
+                <file file="out/jacoco.exec"/>
+            </executiondata>
+
+            <structure name="Line Project">
+                <classfiles>
+                    <fileset dir="out"/>
+                </classfiles>
+                <sourcefiles encoding="UTF-8">
+                    <fileset dir="src"/>
+                </sourcefiles>
+            </structure>
+            <html destdir="out"/>
+        </jacoco:report>
     </target>
 
     <target name="build" depends="clean">
