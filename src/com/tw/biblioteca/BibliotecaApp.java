@@ -9,6 +9,7 @@ public class BibliotecaApp {
     }
 
     public void start() {
-        System.out.println("Welcome to Biblioteca");
+        System.out.print("Welcome to Biblioteca");
+
     }
 }

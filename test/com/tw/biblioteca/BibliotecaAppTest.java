@@ -1,17 +1,21 @@
 package com.tw.biblioteca;
 
 import org.junit.Test;
-import org.mockito.Mockito;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
 
 public class BibliotecaAppTest {
 
     @Test
-    public void shouldStartTheApplication() {
-        BibliotecaApp bibliotecaApp = mock(BibliotecaApp.class);
+    public void shouldDisplayWelcomeMessage() {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(byteArrayOutputStream));
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
         bibliotecaApp.start();
-        Mockito.verify(bibliotecaApp, times(1)).start();
+        assertEquals("Welcome to Biblioteca", byteArrayOutputStream.toString());
+        System.setOut(null);
     }
 }
