@@ -13,7 +13,7 @@ public class BookInfoTest {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(byteArrayOutputStream));
         BookInfo bookInfo = new BookInfo("Harry Potter", "J K Rowling", "2001");
-        bookInfo.printBookInfo();
+        bookInfo.printInfo();
         assertEquals("Harry Potter" + "\t" + "J K Rowling" + "\t" + "2001\n", byteArrayOutputStream.toString());
         System.setOut(System.out);
     }

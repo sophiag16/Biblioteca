@@ -12,7 +12,7 @@ public class BookInfo {
         this.yearOfPublication = yearOfPublication;
     }
 
-    public void printBookInfo() {
+    public void printInfo() {
         System.out.println(name + "\t" + author + "\t" + yearOfPublication);
     }
 }
