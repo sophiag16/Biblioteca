@@ -9,7 +9,8 @@ public class BibliotecaApp {
     }
 
     public void start() {
-        System.out.println("Welcome to Biblioteca");
+        WelcomeMessage welcomeMessage = new WelcomeMessage();
+        welcomeMessage.display();
         System.out.println("Name\tAuthor\tYear of Publishing");
         BookInfo bookInfo1 = new BookInfo("Harry Potter", "J K Rowling", "2001");
         bookInfo1.printBookInfo();
