@@ -14,11 +14,16 @@ public class BibliotecaApp {
     public void start() {
         WelcomeMessage welcomeMessage = new WelcomeMessage();
         welcomeMessage.display();
-        ArrayList<BookInfo> bookInfoArrayList = new ArrayList<BookInfo>();
-        bookInfoArrayList.add(new BookInfo("Harry Potter", "J K Rowling", "2001"));
-        bookInfoArrayList.add(new BookInfo("To Kill A Mockingbird", "Harper Lee", "1970"));
-        bookInfoArrayList.add(new BookInfo("A Brief History Of Time", "Stephen Hawking", "1988"));
-        BookInfoList bookInfoList = new BookInfoList(bookInfoArrayList);
-        bookInfoList.printList();
+        Menu menu = new Menu("1. List Books");
+        int choice = menu.getChoice();
+
+        if(choice == 1) {
+            ArrayList<BookInfo> bookInfoArrayList = new ArrayList<BookInfo>();
+            bookInfoArrayList.add(new BookInfo("Harry Potter", "J K Rowling", "2001"));
+            bookInfoArrayList.add(new BookInfo("To Kill A Mockingbird", "Harper Lee", "1970"));
+            bookInfoArrayList.add(new BookInfo("A Brief History Of Time", "Stephen Hawking", "1988"));
+            BookInfoList bookInfoList = new BookInfoList(bookInfoArrayList);
+            bookInfoList.printList();
+        }
     }
 }
