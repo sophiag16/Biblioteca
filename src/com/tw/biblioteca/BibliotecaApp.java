@@ -16,6 +16,7 @@ public class BibliotecaApp {
         welcomeMessage.display();
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("1. List Books");
+        menuOptions.add("2. Quit");
         Menu menu = new Menu(menuOptions);
         int choice = menu.getChoice();
 
@@ -26,6 +27,10 @@ public class BibliotecaApp {
             bookInfoArrayList.add(new BookInfo("A Brief History Of Time", "Stephen Hawking", "1988"));
             BookInfoList bookInfoList = new BookInfoList(bookInfoArrayList);
             bookInfoList.printList();
+        }
+        else if(choice ==2) {
+            System.out.println("exiting");
+            System.exit(0);
         }
     }
 }

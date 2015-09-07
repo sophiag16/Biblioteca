@@ -34,9 +34,22 @@ public class BibliotecaAppTest {
 
         assertEquals("Welcome to Biblioteca\n" +
                 "1. List Books\n" +
+                "2. Quit\n" +
                 "Name\tAuthor\tYear of Publishing\n" +
                 "Harry Potter\tJ K Rowling\t2001\n" +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
                 "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldExitWhenQuitIsChosen() {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
+        String input = "2";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        bibliotecaApp.start();
+
+        assertEquals("exiting\n", byteArrayOutputStream.toString());
     }
 }
