@@ -14,7 +14,9 @@ public class BibliotecaApp {
     public void start() {
         WelcomeMessage welcomeMessage = new WelcomeMessage();
         welcomeMessage.display();
-        Menu menu = new Menu("1. List Books");
+        ArrayList<String> menuOptions = new ArrayList<>();
+        menuOptions.add("1. List Books");
+        Menu menu = new Menu(menuOptions);
         int choice = menu.getChoice();
 
         if(choice == 1) {
