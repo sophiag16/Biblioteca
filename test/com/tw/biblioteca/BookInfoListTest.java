@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -25,11 +24,7 @@ public class BookInfoListTest {
 
     @Test
     public void ShouldDisplayListOfBookInformation() {
-        ArrayList<BookInfo> bookInfoArrayList = new ArrayList<BookInfo>();
-        bookInfoArrayList.add(new BookInfo("Harry Potter", "J K Rowling", "2001"));
-        bookInfoArrayList.add(new BookInfo("To Kill A Mockingbird", "Harper Lee", "1970"));
-        bookInfoArrayList.add(new BookInfo("A Brief History Of Time", "Stephen Hawking", "1988"));
-        BookInfoList bookInfoList = new BookInfoList(bookInfoArrayList);
+        BookInfoList bookInfoList = new BookInfoList();
 
         bookInfoList.printList();
 

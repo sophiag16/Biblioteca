@@ -9,11 +9,12 @@ import java.util.Scanner;
 public class Menu {
     private ArrayList<String> menuOptions = new ArrayList<>();
 
-    public Menu(ArrayList menuOptions) {
-        this.menuOptions = menuOptions;
+    public Menu() {
+        menuOptions.add("1. List Books");
+        menuOptions.add("2. Quit");
     }
 
-    public int getChoice() {
+    public int chosenOption() {
         int choice = 0;
         do {
             System.out.println(StringUtils.join(menuOptions, "\n"));
@@ -22,13 +23,13 @@ public class Menu {
                 choice = scanner.nextInt();
             } catch (Exception e) {
             }
-        }while(!isValid(choice));
+        } while (!isChoiceValid(choice));
         return choice;
     }
 
-    private boolean isValid(int choice) {
-        for(int i = 1; i <= menuOptions.size(); i++) {
-            if(choice == i)
+    private boolean isChoiceValid(int choice) {
+        for (int i = 1; i <= menuOptions.size(); i++) {
+            if (choice == i)
                 return true;
         }
         System.out.println("Invalid option");
