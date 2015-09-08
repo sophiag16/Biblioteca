@@ -14,5 +14,6 @@ public class Librarian {
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
         bookInfoList.remove(bookName);
+        System.out.println("Thank you! Enjoy the book");
     }
 }
