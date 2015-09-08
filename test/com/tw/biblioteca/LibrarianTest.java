@@ -50,6 +50,20 @@ public class LibrarianTest {
         librarian.checkout();
 
         assertEquals("Enter the name of book to checkout\n" +
-                    "Thank you! Enjoy the book\n", byteArrayOutputStream.toString());
+                "Thank you! Enjoy the book\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldDisplayFailureMessage() {
+        String input = "Harry";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        BookInfoList bookInfoList = new BookInfoList();
+        Librarian librarian = new Librarian(bookInfoList);
+
+        librarian.checkout();
+
+        assertEquals("Enter the name of book to checkout\n" +
+                    "That book is not available\n", byteArrayOutputStream.toString());
     }
 }

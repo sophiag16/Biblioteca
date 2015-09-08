@@ -13,7 +13,9 @@ public class Librarian {
         System.out.println("Enter the name of book to checkout");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
-        bookInfoList.remove(bookName);
-        System.out.println("Thank you! Enjoy the book");
+        if(bookInfoList.remove(bookName))
+            System.out.println("Thank you! Enjoy the book");
+        else
+            System.out.println("That book is not available");
     }
 }

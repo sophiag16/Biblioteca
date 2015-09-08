@@ -18,8 +18,14 @@ public class BookInfoList {
             bookInfoArrayList.get(i).printInfo();
     }
 
-    public void remove(String bookName) {
+    public boolean remove(String bookName) {
         BookInfo bookInfo = new BookInfo(bookName, null, null);
-        bookInfoArrayList.remove(bookInfo);
+        if(bookInfoArrayList.contains(bookInfo)) {
+            bookInfoArrayList.remove(bookInfo);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

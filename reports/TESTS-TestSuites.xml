@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="precise64" id="0" name="BibliotecaAppTest" package="com.tw.biblioteca" tests="1" time="0.793" timestamp="2015-09-08T07:06:33">
+  <testsuite errors="0" failures="0" hostname="precise64" id="0" name="BibliotecaAppTest" package="com.tw.biblioteca" tests="1" time="0.842" timestamp="2015-09-08T11:39:53">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -96,7 +96,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -138,14 +138,14 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.BibliotecaAppTest" name="shouldExitWhenQuitIsChosen" time="0.667" />
+      <testcase classname="com.tw.biblioteca.BibliotecaAppTest" name="shouldExitWhenQuitIsChosen" time="0.713" />
 
       <system-out />
 
       <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="precise64" id="1" name="BookInfoListTest" package="com.tw.biblioteca" tests="2" time="0.01" timestamp="2015-09-08T07:06:34">
+  <testsuite errors="0" failures="0" hostname="precise64" id="1" name="BookInfoListTest" package="com.tw.biblioteca" tests="2" time="0.009" timestamp="2015-09-08T11:39:53">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -241,7 +241,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -292,7 +292,7 @@
       <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="precise64" id="2" name="BookInfoTest" package="com.tw.biblioteca" tests="5" time="0.013" timestamp="2015-09-08T07:06:34">
+  <testsuite errors="0" failures="0" hostname="precise64" id="2" name="BookInfoTest" package="com.tw.biblioteca" tests="5" time="0.014" timestamp="2015-09-08T11:39:53">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -388,7 +388,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -434,7 +434,7 @@
 
       <testcase classname="com.tw.biblioteca.BookInfoTest" name="shouldNotBeEqualToAString" time="0.0" />
 
-      <testcase classname="com.tw.biblioteca.BookInfoTest" name="shouldDisplayInformationAboutBooks" time="0.0" />
+      <testcase classname="com.tw.biblioteca.BookInfoTest" name="shouldDisplayInformationAboutBooks" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.BookInfoTest" name="shoulNotBeEqualToNull" time="0.0" />
 
@@ -445,7 +445,7 @@
       <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="precise64" id="3" name="LibrarianTest" package="com.tw.biblioteca" tests="2" time="0.357" timestamp="2015-09-08T07:06:34">
+  <testsuite errors="0" failures="0" hostname="precise64" id="3" name="LibrarianTest" package="com.tw.biblioteca" tests="3" time="0.34" timestamp="2015-09-08T11:39:53">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -541,7 +541,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -583,16 +583,18 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.LibrarianTest" name="shouldDisplaySuccessMessage" time="0.005" />
+      <testcase classname="com.tw.biblioteca.LibrarianTest" name="shouldDisplaySuccessMessage" time="0.004" />
 
-      <testcase classname="com.tw.biblioteca.LibrarianTest" name="shouldAcceptValidBookNameFromUserAndRemoveTheBook" time="0.345" />
+      <testcase classname="com.tw.biblioteca.LibrarianTest" name="shouldAcceptValidBookNameFromUserAndRemoveTheBook" time="0.325" />
+
+      <testcase classname="com.tw.biblioteca.LibrarianTest" name="shouldDisplayFailureMessage" time="0.0" />
 
       <system-out />
 
       <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="precise64" id="4" name="MenuTest" package="com.tw.biblioteca" tests="2" time="0.011" timestamp="2015-09-08T07:06:34">
+  <testsuite errors="0" failures="0" hostname="precise64" id="4" name="MenuTest" package="com.tw.biblioteca" tests="2" time="0.011" timestamp="2015-09-08T11:39:54">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -688,7 +690,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -730,7 +732,7 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosen" time="0.002" />
+      <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosen" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.MenuTest" name="shouldDisplayMenuOptions" time="0.002" />
 
@@ -739,7 +741,7 @@
       <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="precise64" id="5" name="TaskDispatcherTest" package="com.tw.biblioteca" tests="3" time="0.012" timestamp="2015-09-08T07:06:34">
+  <testsuite errors="0" failures="0" hostname="precise64" id="5" name="TaskDispatcherTest" package="com.tw.biblioteca" tests="3" time="0.028" timestamp="2015-09-08T11:39:54">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -835,7 +837,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -877,18 +879,18 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldExitIfOptionTwoIsChosen" time="0.0" />
+      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldExitIfOptionTwoIsChosen" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldCheckoutBookIfOptionThreeIsChosen" time="0.001" />
 
-      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldDisplayListOfBooksIfOptionOneIsChosen" time="0.0" />
+      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldDisplayListOfBooksIfOptionOneIsChosen" time="0.001" />
 
       <system-out />
 
       <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="precise64" id="6" name="WelcomeMessageTest" package="com.tw.biblioteca" tests="1" time="0.006" timestamp="2015-09-08T07:06:34">
+  <testsuite errors="0" failures="0" hostname="precise64" id="6" name="WelcomeMessageTest" package="com.tw.biblioteca" tests="1" time="0.009" timestamp="2015-09-08T11:39:54">
       <properties>
           <property name="ant.project.invoked-targets" value="coverage" />
 
@@ -984,7 +986,7 @@
 
           <property name="java.vm.specification.version" value="1.7" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases151116372363879308.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher2622842232621794218.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit8426440878747761472.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/vagrant/IdeaProjects/Biblioteca2/junittestcases4587613468589848747.properties filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/vagrant/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/vagrant/IdeaProjects/Biblioteca2/junitvmwatcher6984890019096290780.properties propsfile=/vagrant/IdeaProjects/Biblioteca2/junit4979623337920178256.properties" />
 
           <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
 
@@ -1026,7 +1028,7 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.WelcomeMessageTest" name="shouldPrintTheWelcomeMessage" time="0.0" />
+      <testcase classname="com.tw.biblioteca.WelcomeMessageTest" name="shouldPrintTheWelcomeMessage" time="0.003" />
 
       <system-out />
 
