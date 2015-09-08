@@ -1,70 +1,61 @@
 <?xml version = "1.0"?>
-
-<project xmlns:jacoco="antlib:org.jacoco.ant" name = "Biblioteca2" default = "report" basedir=".">
-
-    <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
-        <classpath path="lib/jacocoant.jar"/>
-    </taskdef>
+<project name="Biblioteca2" default="coverage" basedir=".">
 
     <property name = "project.name" value="Biblioteca2" />
-    <property name = "main.name" value="BibliotecaApp" />
+    <property name = "main.name" value = "BibliotecaApp"/>
     <property name = "package.name" value="com.tw.biblioteca" />
 
-    <target name="runjUnit" depends="build">
-        <jacoco:coverage destfile="./out/jacoco.exec">
-        <junit printsummary="yes" haltonfailure="true" fork="true">
-            <classpath>
-                <pathelement location="lib/junit-4.11.jar"/>
-                <pathelement location="lib/hamcrest-core-1.3.jar"/>
-                <pathelement location="lib/mockito-all-1.9.5.jar"/>
-                <pathelement location="out"/>
-            </classpath>
+    <path id="cobertura.classpath">
+        <fileset dir="lib/cobertura-2.1.1">
+            <include name="cobertura*.jar" />
+            <include name="lib/**/*.jar" />
+        </fileset>
+    </path>
 
-            <batchtest fork="yes">
-                <fileset dir="test">
-                    <include name="**/*Test*.java"/>
-                </fileset>
-            </batchtest>
-        </junit>
-        </jacoco:coverage>
-    </target>
-
-    <target name="report" depends="runjUnit">
-        <jacoco:report>
-            <executiondata>
-                <file file="out/jacoco.exec"/>
-            </executiondata>
-
-            <structure name="Line Project">
-                <classfiles>
-                    <fileset dir="out"/>
-                </classfiles>
-                <sourcefiles encoding="UTF-8">
-                    <fileset dir="src"/>
-                </sourcefiles>
-            </structure>
-            <html destdir="out"/>
-        </jacoco:report>
-    </target>
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
 
     <target name="build" depends="clean">
         <mkdir dir="out"/>
-        <javac destdir="out">
+        <mkdir dir="instrumented"/>
+        <mkdir dir="reports"/>
+        <javac destdir="out" debug="true" includeantruntime="false">
             <src path="src;test"/>
-            <classpath location="lib/junit-4.11.jar"/>
-            <classpath location="lib/hamcrest-core-1.3.jar"/>
-            <classpath location="lib/mockito-all-1.9.5.jar"/>
+            <classpath>
+                <pathelement location="lib/junit-4.12.jar"/>
+                <pathelement location="lib/hamcrest-core-1.3.jar"/>
+                <pathelement location="lib/cobertura-2.1.1/lib/cobertura-2.1.1.jar"/>
+                <pathelement location="lib/deploy.jar"/>
+                <pathelement location="lib/mockito-all-1.9.5.jar"/>
+                <pathelement location="lib/system-rules-1.12.0.jar"/>
+            </classpath>
         </javac>
     </target>
 
+    <target name="instrument" depends="build">
+        <delete file="cobertura.ser" />
+        <delete dir="./instrumented"/>
+        <cobertura-instrument todir="./instrumented">
+            <ignore regex="org.slf4j.*"/>
+            <fileset dir="./out">
+                <include name="**/*.class"/>
+                <exclude name="**/*Test*.class"/>
+            </fileset>
+        </cobertura-instrument>
+    </target>
+
+    <target name="clean" description="clean previous output directory">
+        <delete dir="out"/>
+        <delete dir="reports"/>
+        <delete dir="instrumented"/>
+        <delete file="cobertura.log"/>
+        <delete file="cobertura.ser"/>
+    </target>
+
     <target name="build-jar" depends="build">
-        <jar destfile="lib/${project.name}.jar"
-             basedir="out"
-             excludes="**/Test.class">
+        <jar destfile="lib/${project.name}.jar" basedir="out" excludes="**/Test.class">
             <manifest>
                 <attribute name="Main-Class" value="${package.name}.${main.name}"/>
             </manifest>
-
         </jar>
     </target>
 
@@ -76,8 +67,47 @@
         </java>
     </target>
 
-    <target name="clean" description="clean previous output directory">
-        <delete dir="out"/>
+    <target name="runjUnit" depends="build">
+        <junit printsummary="yes" haltonfailure="true" fork="true" forkmode="once">
+            <classpath location="./instrumented"/>
+            <classpath location="lib/junit-4.12.jar"/>
+            <classpath location="lib/hamcrest-core-1.3.jar"/>
+            <classpath location="lib/deploy.jar"/>
+            <classpath location="lib/system-rules-1.12.0.jar"/>
+            <classpath location="lib/mockito-all-1.9.5.jar"/>
+            <classpath location="lib/Biblioteca2.jar"/>
+            <classpath location="out"/>
+            <classpath refid="cobertura.classpath"/>
+            <formatter type="xml"/>
+            <batchtest todir="reports" fork="yes">
+                <fileset dir="test">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+        <junitreport todir="reports">
+            <fileset dir="reports">
+                <include name="TEST-*.xml" />
+            </fileset>
+            <report format="frames" todir="reports"/>
+        </junitreport>
     </target>
 
+    <target name="coverage-report">
+        <cobertura-report srcdir="src" destdir="reports" format="xml" />
+    </target>
+
+    <target name="summary-coverage-report">
+        <cobertura-report srcdir="src" destdir="reports" format="summaryXml" />
+    </target>
+
+    <target name="alternate-coverage-report">
+        <cobertura-report destdir="reports">
+            <fileset dir="src">
+                <include name="**/*.java"/>
+            </fileset>
+        </cobertura-report>
+    </target>
+
+    <target name="coverage" depends="build, instrument, runjUnit, coverage-report, summary-coverage-report, alternate-coverage-report"/>
 </project>
