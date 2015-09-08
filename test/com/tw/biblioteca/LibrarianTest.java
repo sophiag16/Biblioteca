@@ -3,12 +3,14 @@ package com.tw.biblioteca;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 
 public class LibrarianTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -25,13 +27,15 @@ public class LibrarianTest {
 
     @Test
     public void shouldAcceptValidBookNameFromUserAndRemoveTheBook() {
-        Librarian librarian = new Librarian(new BookInfoList());
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
+        BookInfoList bookInfoList = mock(BookInfoList.class);
+        Librarian librarian = new Librarian(bookInfoList);
 
         librarian.checkout();
 
-        assertEquals(1, 1);
+        Mockito.verify(bookInfoList, times(1)).remove(input);
+
     }
 }

@@ -14,8 +14,12 @@ public class BookInfoList {
 
     public void printList() {
         System.out.print("Name\tAuthor\tYear of Publishing\n");
-        bookInfoArrayList.get(0).printInfo();
-        bookInfoArrayList.get(1).printInfo();
-        bookInfoArrayList.get(2).printInfo();
+        for(int i = 0; i < bookInfoArrayList.size(); i++)
+            bookInfoArrayList.get(i).printInfo();
+    }
+
+    public void remove(String bookName) {
+        BookInfo bookInfo = new BookInfo(bookName, null, null);
+        bookInfoArrayList.remove(bookInfo);
     }
 }

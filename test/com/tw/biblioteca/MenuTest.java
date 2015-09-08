@@ -33,7 +33,8 @@ public class MenuTest {
         int choice = menu.chosenOption();
 
         assertEquals("1. List Books\n" +
-                      "2. Quit\n", byteArrayOutputStream.toString());
+                      "2. Quit\n" +
+                        "3. Checkout Book\n", byteArrayOutputStream.toString());
     }
 
     @Test

@@ -1,5 +1,7 @@
 package com.tw.biblioteca;
 
+import java.util.Scanner;
+
 public class Librarian {
     private BookInfoList bookInfoList = new BookInfoList();
 
@@ -9,6 +11,8 @@ public class Librarian {
 
     public void checkout() {
         System.out.println("Enter the name of book to checkout");
-
+        Scanner scanner = new Scanner(System.in);
+        String bookName = scanner.nextLine();
+        bookInfoList.remove(bookName);
     }
 }

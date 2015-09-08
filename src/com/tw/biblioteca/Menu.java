@@ -12,6 +12,7 @@ public class Menu {
     public Menu() {
         menuOptions.add("1. List Books");
         menuOptions.add("2. Quit");
+        menuOptions.add("3. Checkout Book");
     }
 
     public int chosenOption() {

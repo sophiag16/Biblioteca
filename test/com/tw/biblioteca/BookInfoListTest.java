@@ -23,13 +23,25 @@ public class BookInfoListTest {
     }
 
     @Test
-    public void ShouldDisplayListOfBookInformation() {
+    public void shouldDisplayListOfBookInformation() {
         BookInfoList bookInfoList = new BookInfoList();
 
         bookInfoList.printList();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "Harry Potter\tJ K Rowling\t2001\n" +
+                "To Kill A Mockingbird\tHarper Lee\t1970\n" +
+                "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldNotDisplayCheckedOutBooks() {
+        BookInfoList bookInfoList = new BookInfoList();
+
+        bookInfoList.remove("Harry Potter");
+        bookInfoList.printList();
+
+        assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
                 "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
     }
