@@ -15,17 +15,22 @@ public class Menu {
         menuOptions.add("3. Checkout Book");
     }
 
-    public int chosenOption() {
+    public int chosenValidOption() {
         int choice = 0;
         do {
-            System.out.println(StringUtils.join(menuOptions, "\n"));
-            try {
-                Scanner scanner = new Scanner(System.in);
-                choice = scanner.nextInt();
-            } catch (Exception e) {
-            }
+            choice = chosenOption();
         } while (!isChoiceValid(choice));
         return choice;
+    }
+
+    public int chosenOption() {
+        System.out.println(StringUtils.join(menuOptions, "\n"));
+        try {
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextInt();
+        } catch (Exception e) {
+            return 0;
+        }
     }
 
     private boolean isChoiceValid(int choice) {

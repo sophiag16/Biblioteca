@@ -33,8 +33,8 @@ public class MenuTest {
         int choice = menu.chosenOption();
 
         assertEquals("1. List Books\n" +
-                      "2. Quit\n" +
-                        "3. Checkout Book\n", byteArrayOutputStream.toString());
+                "2. Quit\n" +
+                "3. Checkout Book\n", byteArrayOutputStream.toString());
     }
 
     @Test
@@ -44,8 +44,20 @@ public class MenuTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
 
-        int choice = menu.chosenOption();
+        int choice = menu.chosenValidOption();
 
         assertEquals(1, choice);
+    }
+
+    @Test
+    public void shouldReturnInvalidOptionMessage() {
+        Menu menu = new Menu();
+        String input = "w";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        int choice = menu.chosenOption();
+
+        assertEquals(0, choice);
     }
 }

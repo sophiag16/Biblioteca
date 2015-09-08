@@ -28,4 +28,8 @@ public class BookInfoList {
             return false;
         }
     }
+
+    public void add(String input) {
+
+    }
 }
