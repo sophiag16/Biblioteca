@@ -18,14 +18,4 @@ public class Librarian {
         else
             System.out.println("That book is not available");
     }
-
-    public void returnBook() {
-        System.out.println("Enter the name of book to return");
-        Scanner scanner = new Scanner(System.in);
-        String bookName = scanner.nextLine();
-        if(bookInfoList.remove(bookName))
-            System.out.println("Thank you! Enjoy the book");
-        else
-            System.out.println("That book is not available");
-    }
 }

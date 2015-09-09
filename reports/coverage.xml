@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.81" branch-rate="0.6428571428571429" lines-covered="81" lines-valid="100" branches-covered="18" branches-valid="28" complexity="2.15" version="2.1.1" timestamp="1441729104695">
+<coverage line-rate="0.8901098901098901" branch-rate="0.7307692307692307" lines-covered="81" lines-valid="91" branches-covered="19" branches-valid="26" complexity="2.2222222222222223" version="2.1.1" timestamp="1441774912364">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.biblioteca" line-rate="0.81" branch-rate="0.6428571428571429" complexity="2.15">
+		<package name="com.tw.biblioteca" line-rate="0.8901098901098901" branch-rate="0.7307692307692307" complexity="2.2222222222222223">
 			<classes>
 				<class name="com.tw.biblioteca.BibliotecaApp" filename="com/tw/biblioteca/BibliotecaApp.java" line-rate="0.6363636363636364" branch-rate="1.0" complexity="1.5">
 					<methods>
@@ -148,7 +148,7 @@
 						<line number="39" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.biblioteca.BookInfoList" filename="com/tw/biblioteca/BookInfoList.java" line-rate="0.9375" branch-rate="1.0" complexity="1.75">
+				<class name="com.tw.biblioteca.BookInfoList" filename="com/tw/biblioteca/BookInfoList.java" line-rate="1.0" branch-rate="1.0" complexity="2.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -158,11 +158,6 @@
 								<line number="11" hits="12" branch="false"/>
 								<line number="12" hits="12" branch="false"/>
 								<line number="13" hits="12" branch="false"/>
-							</lines>
-						</method>
-						<method name="add" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="34" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="printList" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -215,10 +210,9 @@
 						<line number="24" hits="2" branch="false"/>
 						<line number="25" hits="2" branch="false"/>
 						<line number="28" hits="1" branch="false"/>
-						<line number="34" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.biblioteca.Librarian" filename="com/tw/biblioteca/Librarian.java" line-rate="0.6111111111111112" branch-rate="0.5" complexity="1.6666666666666667">
+				<class name="com.tw.biblioteca.Librarian" filename="com/tw/biblioteca/Librarian.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lcom/tw/biblioteca/BookInfoList;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -243,21 +237,6 @@
 								<line number="20" hits="4" branch="false"/>
 							</lines>
 						</method>
-						<method name="returnBook" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
-							<lines>
-								<line number="23" hits="0" branch="false"/>
-								<line number="24" hits="0" branch="false"/>
-								<line number="25" hits="0" branch="false"/>
-								<line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="27" hits="0" branch="false"/>
-								<line number="29" hits="0" branch="false"/>
-								<line number="30" hits="0" branch="false"/>
-							</lines>
-						</method>
 					</methods>
 					<lines>
 						<line number="6" hits="4" branch="false"/>
@@ -275,106 +254,95 @@
 						<line number="17" hits="1" branch="false"/>
 						<line number="19" hits="3" branch="false"/>
 						<line number="20" hits="4" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-						<line number="24" hits="0" branch="false"/>
-						<line number="25" hits="0" branch="false"/>
-						<line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="27" hits="0" branch="false"/>
-						<line number="29" hits="0" branch="false"/>
-						<line number="30" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.biblioteca.Menu" filename="com/tw/biblioteca/Menu.java" line-rate="0.9" branch-rate="0.5" complexity="2.5">
+				<class name="com.tw.biblioteca.Menu" filename="com/tw/biblioteca/Menu.java" line-rate="0.9" branch-rate="0.6666666666666666" complexity="2.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="10" hits="4" branch="false"/>
-								<line number="12" hits="4" branch="false"/>
-								<line number="13" hits="4" branch="false"/>
-								<line number="14" hits="4" branch="false"/>
-								<line number="15" hits="4" branch="false"/>
-								<line number="16" hits="4" branch="false"/>
+								<line number="10" hits="6" branch="false"/>
+								<line number="12" hits="6" branch="false"/>
+								<line number="13" hits="6" branch="false"/>
+								<line number="14" hits="6" branch="false"/>
+								<line number="15" hits="6" branch="false"/>
+								<line number="16" hits="6" branch="false"/>
 							</lines>
 						</method>
 						<method name="chosenOption" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="27" hits="4" branch="false"/>
-								<line number="29" hits="4" branch="false"/>
-								<line number="30" hits="4" branch="false"/>
+								<line number="27" hits="6" branch="false"/>
+								<line number="29" hits="6" branch="false"/>
+								<line number="30" hits="6" branch="false"/>
 								<line number="31" hits="1" branch="false"/>
 								<line number="32" hits="1" branch="false"/>
 							</lines>
 						</method>
 						<method name="chosenValidOption" signature="()I" line-rate="1.0" branch-rate="0.5" complexity="0">
 							<lines>
-								<line number="19" hits="1" branch="false"/>
-								<line number="21" hits="1" branch="false"/>
-								<line number="22" hits="1" branch="true" condition-coverage="50% (1/2)">
+								<line number="19" hits="3" branch="false"/>
+								<line number="21" hits="3" branch="false"/>
+								<line number="22" hits="3" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="23" hits="1" branch="false"/>
+								<line number="23" hits="3" branch="false"/>
 							</lines>
 						</method>
-						<method name="isChoiceValid" signature="(I)Z" line-rate="0.6" branch-rate="0.5" complexity="0">
+						<method name="isChoiceValid" signature="(I)Z" line-rate="0.6" branch-rate="0.75" complexity="0">
 							<lines>
-								<line number="37" hits="1" branch="true" condition-coverage="50% (1/2)">
+								<line number="37" hits="6" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="38" hits="1" branch="true" condition-coverage="50% (1/2)">
+								<line number="38" hits="6" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
-										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="39" hits="1" branch="false"/>
+								<line number="39" hits="3" branch="false"/>
 								<line number="41" hits="0" branch="false"/>
 								<line number="42" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="10" hits="4" branch="false"/>
-						<line number="12" hits="4" branch="false"/>
-						<line number="13" hits="4" branch="false"/>
-						<line number="14" hits="4" branch="false"/>
-						<line number="15" hits="4" branch="false"/>
-						<line number="16" hits="4" branch="false"/>
-						<line number="19" hits="1" branch="false"/>
-						<line number="21" hits="1" branch="false"/>
-						<line number="22" hits="1" branch="true" condition-coverage="50% (1/2)">
+						<line number="10" hits="6" branch="false"/>
+						<line number="12" hits="6" branch="false"/>
+						<line number="13" hits="6" branch="false"/>
+						<line number="14" hits="6" branch="false"/>
+						<line number="15" hits="6" branch="false"/>
+						<line number="16" hits="6" branch="false"/>
+						<line number="19" hits="3" branch="false"/>
+						<line number="21" hits="3" branch="false"/>
+						<line number="22" hits="3" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="23" hits="1" branch="false"/>
-						<line number="27" hits="4" branch="false"/>
-						<line number="29" hits="4" branch="false"/>
-						<line number="30" hits="4" branch="false"/>
+						<line number="23" hits="3" branch="false"/>
+						<line number="27" hits="6" branch="false"/>
+						<line number="29" hits="6" branch="false"/>
+						<line number="30" hits="6" branch="false"/>
 						<line number="31" hits="1" branch="false"/>
 						<line number="32" hits="1" branch="false"/>
-						<line number="37" hits="1" branch="true" condition-coverage="50% (1/2)">
+						<line number="37" hits="6" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="38" hits="1" branch="true" condition-coverage="50% (1/2)">
+						<line number="38" hits="6" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
-								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="39" hits="1" branch="false"/>
+						<line number="39" hits="3" branch="false"/>
 						<line number="41" hits="0" branch="false"/>
 						<line number="42" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.biblioteca.TaskDispatcher" filename="com/tw/biblioteca/TaskDispatcher.java" line-rate="0.9166666666666666" branch-rate="0.75" complexity="2.5">
+				<class name="com.tw.biblioteca.TaskDispatcher" filename="com/tw/biblioteca/TaskDispatcher.java" line-rate="1.0" branch-rate="0.75" complexity="2.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(ILcom/tw/biblioteca/BookInfoList;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -384,7 +352,7 @@
 								<line number="11" hits="4" branch="false"/>
 							</lines>
 						</method>
-						<method name="dispatch" signature="()V" line-rate="0.875" branch-rate="0.75" complexity="0">
+						<method name="dispatch" signature="()V" line-rate="1.0" branch-rate="0.75" complexity="0">
 							<lines>
 								<line number="15" hits="4" branch="true" condition-coverage="75% (3/4)">
 									<conditions>
@@ -394,10 +362,9 @@
 								<line number="17" hits="1" branch="false"/>
 								<line number="18" hits="1" branch="false"/>
 								<line number="20" hits="2" branch="false"/>
-								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="1" branch="false"/>
 								<line number="23" hits="1" branch="false"/>
-								<line number="24" hits="1" branch="false"/>
-								<line number="26" hits="2" branch="false"/>
+								<line number="25" hits="2" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -414,10 +381,9 @@
 						<line number="17" hits="1" branch="false"/>
 						<line number="18" hits="1" branch="false"/>
 						<line number="20" hits="2" branch="false"/>
-						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="1" branch="false"/>
 						<line number="23" hits="1" branch="false"/>
-						<line number="24" hits="1" branch="false"/>
-						<line number="26" hits="2" branch="false"/>
+						<line number="25" hits="2" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.biblioteca.WelcomeMessage" filename="com/tw/biblioteca/WelcomeMessage.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">

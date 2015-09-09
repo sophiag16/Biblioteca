@@ -18,7 +18,6 @@ public class TaskDispatcher {
                 break;
             case 2:
                 System.exit(0);
-                break;
             case 3:
                 Librarian librarian = new Librarian(bookInfoList);
                 librarian.checkout();

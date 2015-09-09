@@ -38,7 +38,7 @@ public class MenuTest {
     }
 
     @Test
-    public void shouldReturnMenuOptionChosen() {
+    public void shouldReturnMenuOptionChosenforOption1() {
         Menu menu = new Menu();
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
@@ -59,5 +59,29 @@ public class MenuTest {
         int choice = menu.chosenOption();
 
         assertEquals(0, choice);
+    }
+
+    @Test
+    public void shouldReturnMenuOptionChosenforOption2() {
+        Menu menu = new Menu();
+        String input = "2";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        int choice = menu.chosenValidOption();
+
+        assertEquals(2, choice);
+    }
+
+    @Test
+    public void shouldReturnMenuOptionChosenforOption3() {
+        Menu menu = new Menu();
+        String input = "3";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        int choice = menu.chosenValidOption();
+
+        assertEquals(3, choice);
     }
 }
