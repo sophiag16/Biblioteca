@@ -25,5 +25,8 @@ public class Librarian {
         String bookName = scanner.nextLine();
         if(library.addBook(bookName))
             System.out.println("Thank you for returning the book.");
+        else
+            System.out.println("That is not a valid book to return.");
+
     }
 }

@@ -95,4 +95,19 @@ public class LibrarianTest {
         assertEquals("Enter the name of book to issueBook\n" +
                 "Thank you for returning the book.\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldDisplayFailureMessageForUnsuccessfulReturnAttempt() {
+        String input = "Harry";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Library library = mock(Library.class);
+        when(library.addBook("Harry")).thenReturn(false);
+        Librarian librarian = new Librarian(library);
+
+        librarian.returnBook();
+
+        assertEquals("Enter the name of book to issueBook\n" +
+                "That is not a valid book to return.\n", byteArrayOutputStream.toString());
+    }
 }
