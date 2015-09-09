@@ -18,4 +18,11 @@ public class Librarian {
         else
             System.out.println("That book is not available");
     }
+
+    public void returnBook() {
+        System.out.println("Enter the name of book to issueBook");
+        Scanner scanner = new Scanner(System.in);
+        String bookName = scanner.nextLine();
+        library.addBook(bookName);
+    }
 }

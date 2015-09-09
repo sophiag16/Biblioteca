@@ -66,4 +66,17 @@ public class LibrarianTest {
         assertEquals("Enter the name of book to issueBook\n" +
                     "That book is not available\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldAcceptValidBookNameFromUserAndAddTheBook() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Library library = mock(Library.class);
+        Librarian librarian = new Librarian(library);
+
+        librarian.returnBook();
+
+        Mockito.verify(library, times(1)).addBook(input);
+    }
 }
