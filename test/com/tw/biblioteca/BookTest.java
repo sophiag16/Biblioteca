@@ -60,4 +60,17 @@ public class BookTest {
 
         assertEquals(book1, book2);
     }
+
+    @Test
+    public void shouldCompareABookToItselfUsingHashcode() {
+        Book book = new Book("james", "bond", "1980");
+        assertEquals(book.hashCode(), book.hashCode());
+    }
+
+    @Test
+    public void shouldCompareTwoEqualBooksUsingHashcode() {
+        Book book1 = new Book("james", "bond", "1980");
+        Book book2 = new Book("james", "bond", "1980");
+        assertEquals(book1.hashCode(), book2.hashCode());
+    }
 }
