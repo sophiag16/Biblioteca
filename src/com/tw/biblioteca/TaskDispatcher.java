@@ -21,6 +21,8 @@ public class TaskDispatcher {
             case 3:
                 new Librarian(library).issueBook();
                 break;
+            case 4:
+                new Librarian(library).returnBook();
         }
     }
 }

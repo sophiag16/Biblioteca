@@ -63,4 +63,17 @@ public class TaskDispatcherTest {
 
         Mockito.verify(library, times(1)).removeBook(input);
     }
+
+    @Test
+    public void shouldReturnBookIfOptionFourIsChosen() {
+        String input = "Harry Potter";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Library library = mock(Library.class);
+        TaskDispatcher taskDispatcher = new TaskDispatcher(4, library);
+
+        taskDispatcher.dispatch();
+
+        Mockito.verify(library, times(1)).addBook(input);
+    }
 }
