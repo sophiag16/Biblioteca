@@ -23,6 +23,7 @@ public class Librarian {
         System.out.println("Enter the name of book to issueBook");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
-        library.addBook(bookName);
+        if(library.addBook(bookName))
+            System.out.println("Thank you for returning the book.");
     }
 }
