@@ -56,10 +56,11 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
+        Librarian librarian = mock(Librarian.class);
         TaskDispatcher taskDispatcher = new TaskDispatcher(3, library);
 
         taskDispatcher.dispatch();
 
-        Mockito.verify(library, times(1)).remove(input);
+        Mockito.verify(library, times(1)).removeBook(input);
     }
 }

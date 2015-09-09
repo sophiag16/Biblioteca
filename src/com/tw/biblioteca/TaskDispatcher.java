@@ -19,8 +19,8 @@ public class TaskDispatcher {
             case 2:
                 System.exit(0);
             case 3:
-                Librarian librarian = new Librarian(library);
-                librarian.checkout();
+                new Librarian(library).issueBook();
+                break;
         }
     }
 }

@@ -4,28 +4,34 @@ package com.tw.biblioteca;
 import java.util.ArrayList;
 
 public class Library {
-    ArrayList<Book> bookArrayList = new ArrayList<Book>();
+    private ArrayList<Book> availableBookArrayList = new ArrayList<Book>();
+    private ArrayList<Book> issuedBookArrayList = new ArrayList<Book>();
 
     public Library() {
-        bookArrayList.add(new Book("Harry Potter", "J K Rowling", "2001"));
-        bookArrayList.add(new Book("To Kill A Mockingbird", "Harper Lee", "1970"));
-        bookArrayList.add(new Book("A Brief History Of Time", "Stephen Hawking", "1988"));
+        availableBookArrayList.add(new Book("Harry Potter", "J K Rowling", "2001"));
+        availableBookArrayList.add(new Book("To Kill A Mockingbird", "Harper Lee", "1970"));
+        availableBookArrayList.add(new Book("A Brief History Of Time", "Stephen Hawking", "1988"));
     }
 
     public void printList() {
         System.out.print("Name\tAuthor\tYear of Publishing\n");
-        for(int i = 0; i < bookArrayList.size(); i++)
-            bookArrayList.get(i).printInfo();
+        for(int i = 0; i < availableBookArrayList.size(); i++)
+            availableBookArrayList.get(i).printInfo();
     }
 
-    public boolean remove(String bookName) {
+    public boolean removeBook(String bookName) {
         Book book = new Book(bookName, null, null);
-        if(bookArrayList.contains(book)) {
-            bookArrayList.remove(book);
+        if(availableBookArrayList.contains(book)) {
+            issuedBookArrayList.add(availableBookArrayList.remove(availableBookArrayList.indexOf(book)));
             return true;
         }
         else {
             return false;
         }
+    }
+
+    public void addBook(String bookName) {
+        Book book = new Book(bookName, null, null);
+        availableBookArrayList.add(issuedBookArrayList.remove(issuedBookArrayList.indexOf(book)));
     }
 }

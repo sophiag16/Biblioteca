@@ -34,9 +34,9 @@ public class LibrarianTest {
         Library library = mock(Library.class);
         Librarian librarian = new Librarian(library);
 
-        librarian.checkout();
+        librarian.issueBook();
 
-        Mockito.verify(library, times(1)).remove(input);
+        Mockito.verify(library, times(1)).removeBook(input);
     }
 
     @Test
@@ -47,9 +47,9 @@ public class LibrarianTest {
         Library library = new Library();
         Librarian librarian = new Librarian(library);
 
-        librarian.checkout();
+        librarian.issueBook();
 
-        assertEquals("Enter the name of book to checkout\n" +
+        assertEquals("Enter the name of book to issueBook\n" +
                 "Thank you! Enjoy the book\n", byteArrayOutputStream.toString());
     }
 
@@ -61,9 +61,9 @@ public class LibrarianTest {
         Library library = new Library();
         Librarian librarian = new Librarian(library);
 
-        librarian.checkout();
+        librarian.issueBook();
 
-        assertEquals("Enter the name of book to checkout\n" +
+        assertEquals("Enter the name of book to issueBook\n" +
                     "That book is not available\n", byteArrayOutputStream.toString());
     }
 }

@@ -9,11 +9,11 @@ public class Librarian {
         this.library = library;
     }
 
-    public void checkout() {
-        System.out.println("Enter the name of book to checkout");
+    public void issueBook() {
+        System.out.println("Enter the name of book to issueBook");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
-        if(library.remove(bookName))
+        if(library.removeBook(bookName))
             System.out.println("Thank you! Enjoy the book");
         else
             System.out.println("That book is not available");
