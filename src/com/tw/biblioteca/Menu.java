@@ -30,8 +30,10 @@ public class Menu {
             Scanner scanner = new Scanner(System.in);
             return scanner.nextInt();
         } catch (Exception e) {
+            System.out.println("Invalid option");
             return 0;
         }
+
     }
 
     private boolean isChoiceValid(int choice) {

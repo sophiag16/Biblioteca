@@ -1,13 +1,13 @@
 <html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Unit Test Results: com.tw.biblioteca.BookTest</title>
+<title>Unit Test Results: com.tw.biblioteca.LibraryControllerTest</title>
 <link rel="stylesheet" type="text/css" title="Style" href="../../../stylesheet.css">
 <script type="text/javascript" language="JavaScript">
         var TestCases = new Array();
         var cur;
         
-    cur = TestCases['com.tw.biblioteca.BookTest'] = new Array();
+    cur = TestCases['com.tw.biblioteca.LibraryControllerTest'] = new Array();
     
         cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
     
@@ -181,13 +181,13 @@
 </tr>
 </table>
 <hr size="1">
-<h3>Class com.tw.biblioteca.BookTest</h3>
+<h3>Class com.tw.biblioteca.LibraryControllerTest</h3>
 <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 <tr valign="top">
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Pass">
-<td><a title="Display all tests" href="1_BookTest.html">BookTest</a></td><td><a title="Display all tests" href="1_BookTest.html">7</a></td><td>0</td><td>0</td><td>0.018</td><td>2015-09-09T18:43:11</td><td>precise64</td>
+<td><a title="Display all tests" href="2_LibraryControllerTest.html">LibraryControllerTest</a></td><td><a title="Display all tests" href="2_LibraryControllerTest.html">6</a></td><td>0</td><td>0</td><td>0.384</td><td>2015-09-09T18:43:11</td><td>precise64</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -196,29 +196,26 @@
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldBeEqualToItself"></a>shouldBeEqualToItself</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="shouldDisplayFailureMessageForUnsuccessfulReturnAttempt"></a>shouldDisplayFailureMessageForUnsuccessfulReturnAttempt</td><td>Success</td><td></td><td>0.347</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldNotBeEqualToAString"></a>shouldNotBeEqualToAString</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldDisplaySuccessMessageForSuccessfulCheckout"></a>shouldDisplaySuccessMessageForSuccessfulCheckout</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldCompareTwoEqualBooksUsingHashcode"></a>shouldCompareTwoEqualBooksUsingHashcode</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldDisplaySuccessMessageForSuccessfulReturn"></a>shouldDisplaySuccessMessageForSuccessfulReturn</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shouldDisplayInformationAboutBooks"></a>shouldDisplayInformationAboutBooks</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldAcceptValidBookNameFromUserAndRemoveTheBook"></a>shouldAcceptValidBookNameFromUserAndRemoveTheBook</td><td>Success</td><td></td><td>0.020</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shoulNotBeEqualToNull"></a>shoulNotBeEqualToNull</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldDisplayFailureMessageForUnsuccessfulCheckoutAttempt"></a>shouldDisplayFailureMessageForUnsuccessfulCheckoutAttempt</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="shoulNotBeEqualToAnotherBook"></a>shoulNotBeEqualToAnotherBook</td><td>Success</td><td></td><td>0.000</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="shouldCompareABookToItselfUsingHashcode"></a>shouldCompareABookToItselfUsingHashcode</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="shouldAcceptValidBookNameFromUserAndAddTheBook"></a>shouldAcceptValidBookNameFromUserAndAddTheBook</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 </table>
 <div class="Properties">
-<a href="javascript:displayProperties('com.tw.biblioteca.BookTest');">
+<a href="javascript:displayProperties('com.tw.biblioteca.LibraryControllerTest');">
                     Properties &raquo;
                 </a>
 </div>

@@ -1,4 +1,4 @@
-//has a list of book-information and displays it
+//has a set of book and handles it
 package com.tw.biblioteca;
 
 import java.util.ArrayList;

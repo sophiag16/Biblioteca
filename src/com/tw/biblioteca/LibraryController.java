@@ -1,11 +1,12 @@
+//controls the issue and return of books of library
 package com.tw.biblioteca;
 
 import java.util.Scanner;
 
-public class Librarian {
+public class LibraryController {
     private Library library = new Library();
 
-    public Librarian(Library library) {
+    public LibraryController(Library library) {
         this.library = library;
     }
 

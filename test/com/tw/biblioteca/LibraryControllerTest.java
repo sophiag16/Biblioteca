@@ -14,7 +14,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 
-public class LibrarianTest {
+public class LibraryControllerTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
     @Before
@@ -33,9 +33,9 @@ public class LibrarianTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Librarian librarian = new Librarian(library);
+        LibraryController libraryController = new LibraryController(library);
 
-        librarian.issueBook();
+        libraryController.issueBook();
 
         Mockito.verify(library, times(1)).removeBook(input);
     }
@@ -46,9 +46,9 @@ public class LibrarianTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = new Library();
-        Librarian librarian = new Librarian(library);
+        LibraryController libraryController = new LibraryController(library);
 
-        librarian.issueBook();
+        libraryController.issueBook();
 
         assertEquals("Enter the name of book to issueBook\n" +
                 "Thank you! Enjoy the book\n", byteArrayOutputStream.toString());
@@ -60,9 +60,9 @@ public class LibrarianTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = new Library();
-        Librarian librarian = new Librarian(library);
+        LibraryController libraryController = new LibraryController(library);
 
-        librarian.issueBook();
+        libraryController.issueBook();
 
         assertEquals("Enter the name of book to issueBook\n" +
                 "That book is not available\n", byteArrayOutputStream.toString());
@@ -74,9 +74,9 @@ public class LibrarianTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Librarian librarian = new Librarian(library);
+        LibraryController libraryController = new LibraryController(library);
 
-        librarian.returnBook();
+        libraryController.returnBook();
 
         Mockito.verify(library, times(1)).addBook(input);
     }
@@ -88,9 +88,9 @@ public class LibrarianTest {
         System.setIn(inContent);
         Library library = mock(Library.class);
         when(library.addBook("Harry Potter")).thenReturn(true);
-        Librarian librarian = new Librarian(library);
+        LibraryController libraryController = new LibraryController(library);
 
-        librarian.returnBook();
+        libraryController.returnBook();
 
         assertEquals("Enter the name of book to issueBook\n" +
                 "Thank you for returning the book.\n", byteArrayOutputStream.toString());
@@ -103,9 +103,9 @@ public class LibrarianTest {
         System.setIn(inContent);
         Library library = mock(Library.class);
         when(library.addBook("Harry")).thenReturn(false);
-        Librarian librarian = new Librarian(library);
+        LibraryController libraryController = new LibraryController(library);
 
-        librarian.returnBook();
+        libraryController.returnBook();
 
         assertEquals("Enter the name of book to issueBook\n" +
                 "That is not a valid book to return.\n", byteArrayOutputStream.toString());

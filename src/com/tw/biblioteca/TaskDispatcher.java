@@ -1,4 +1,4 @@
-//executes the option chosen by user
+//delegates execution according to the option chosen by user
 package com.tw.biblioteca;
 
 public class TaskDispatcher {
@@ -19,10 +19,10 @@ public class TaskDispatcher {
             case 2:
                 System.exit(0);
             case 3:
-                new Librarian(library).issueBook();
+                new LibraryController(library).issueBook();
                 break;
             case 4:
-                new Librarian(library).returnBook();
+                new LibraryController(library).returnBook();
         }
     }
 }
