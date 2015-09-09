@@ -13,6 +13,7 @@ public class Menu {
         menuOptions.add("1. List Books");
         menuOptions.add("2. Quit");
         menuOptions.add("3. Checkout Book");
+        menuOptions.add("4. Return Book");
     }
 
     public int chosenValidOption() {
