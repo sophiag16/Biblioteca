@@ -40,7 +40,7 @@ public class LibrarianTest {
     }
 
     @Test
-    public void shouldDisplaySuccessMessage() {
+    public void shouldDisplaySuccessMessageForSuccessfulCheckout() {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -54,7 +54,7 @@ public class LibrarianTest {
     }
 
     @Test
-    public void shouldDisplayFailureMessage() {
+    public void shouldDisplayFailureMessageForUnsuccessfulCheckoutAttempt() {
         String input = "Harry";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -64,7 +64,7 @@ public class LibrarianTest {
         librarian.issueBook();
 
         assertEquals("Enter the name of book to issueBook\n" +
-                    "That book is not available\n", byteArrayOutputStream.toString());
+                "That book is not available\n", byteArrayOutputStream.toString());
     }
 
     @Test

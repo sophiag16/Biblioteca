@@ -30,8 +30,14 @@ public class Library {
         }
     }
 
-    public void addBook(String bookName) {
+    public boolean addBook(String bookName) {
         Book book = new Book(bookName, null, null);
-        availableBookArrayList.add(issuedBookArrayList.remove(issuedBookArrayList.indexOf(book)));
+        if(issuedBookArrayList.contains(book)) {
+            availableBookArrayList.add(issuedBookArrayList.remove(issuedBookArrayList.indexOf(book)));
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

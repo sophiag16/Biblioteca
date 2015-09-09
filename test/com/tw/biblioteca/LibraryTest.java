@@ -47,6 +47,20 @@ public class LibraryTest {
     }
 
     @Test
+    public void shouldReturnTrueIfSuccessfullyIssued() {
+        Library library = new Library();
+
+        assertEquals(true, library.removeBook("Harry Potter"));
+    }
+
+    @Test
+    public void shouldReturnFalseIfFailedToIssue() {
+        Library library = new Library();
+
+        assertEquals(false, library.removeBook("Harry"));
+    }
+
+    @Test
     public void shouldAgainDisplayReturnedBooks() {
         Library library = new Library();
 
@@ -58,5 +72,21 @@ public class LibraryTest {
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
                 "A Brief History Of Time\tStephen Hawking\t1988\n" +
                 "Harry Potter\tJ K Rowling\t2001\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldReturnTrueIfSuccessfullyReturned() {
+        Library library = new Library();
+
+        library.removeBook("Harry Potter");
+
+        assertEquals(true, library.addBook("Harry Potter"));
+    }
+
+    @Test
+    public void shouldReturnFalseIfFailedToReturn() {
+        Library library = new Library();
+
+        assertEquals(false, library.addBook("Harry"));
     }
 }
