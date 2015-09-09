@@ -34,7 +34,6 @@ public class TaskDispatcherTest {
     @Test
     public void shouldDisplayListOfBooksIfOptionOneIsChosen() {
         TaskDispatcher taskDispatcher = new TaskDispatcher(1, new Library());
-        Library library = new Library();
 
         taskDispatcher.dispatch();
 
