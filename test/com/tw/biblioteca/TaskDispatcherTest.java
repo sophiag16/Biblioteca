@@ -33,8 +33,8 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldDisplayListOfBooksIfOptionOneIsChosen() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher(1, new BookInfoList());
-        BookInfoList bookInfoList = new BookInfoList();
+        TaskDispatcher taskDispatcher = new TaskDispatcher(1, new Library());
+        Library library = new Library();
 
         taskDispatcher.dispatch();
 
@@ -47,7 +47,7 @@ public class TaskDispatcherTest {
     @Test
     public void shouldExitIfOptionTwoIsChosen() {
         exit.expectSystemExit();
-        TaskDispatcher taskDispatcher = new TaskDispatcher(2, new BookInfoList());
+        TaskDispatcher taskDispatcher = new TaskDispatcher(2, new Library());
         taskDispatcher.dispatch();
     }
 
@@ -56,11 +56,11 @@ public class TaskDispatcherTest {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        BookInfoList bookInfoList = mock(BookInfoList.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher(3, bookInfoList);
+        Library library = mock(Library.class);
+        TaskDispatcher taskDispatcher = new TaskDispatcher(3, library);
 
         taskDispatcher.dispatch();
 
-        Mockito.verify(bookInfoList, times(1)).remove(input);
+        Mockito.verify(library, times(1)).remove(input);
     }
 }

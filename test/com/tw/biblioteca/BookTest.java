@@ -10,7 +10,7 @@ import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class BookInfoTest {
+public class BookTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
     @Before
@@ -25,39 +25,39 @@ public class BookInfoTest {
 
     @Test
     public void shouldDisplayInformationAboutBooks() {
-        BookInfo bookInfo = new BookInfo("Harry Potter", "J K Rowling", "2001");
+        Book book = new Book("Harry Potter", "J K Rowling", "2001");
 
-        bookInfo.printInfo();
+        book.printInfo();
 
         assertEquals("Harry Potter" + "\t" + "J K Rowling" + "\t" + "2001\n", byteArrayOutputStream.toString());
     }
 
     @Test
     public void shouldBeEqualToItself() {
-        BookInfo bookInfo = new BookInfo("james", "bond", "1980");
+        Book book = new Book("james", "bond", "1980");
 
-        assertEquals(bookInfo, bookInfo);
+        assertEquals(book, book);
     }
 
     @Test
     public void shouldNotBeEqualToAString() {
-        BookInfo bookInfo = new BookInfo("james", "bond", "1980");
+        Book book = new Book("james", "bond", "1980");
 
-        assertNotEquals(bookInfo, "someBook");
+        assertNotEquals(book, "someBook");
     }
 
     @Test
     public void shoulNotBeEqualToNull() {
-        BookInfo bookInfo = new BookInfo("james", "bond", "1980");
+        Book book = new Book("james", "bond", "1980");
 
-        assertNotEquals(bookInfo, null);
+        assertNotEquals(book, null);
     }
 
     @Test
     public void shoulNotBeEqualToAnotherBook() {
-        BookInfo bookInfo1 = new BookInfo("james", "bond", "1980");
-        BookInfo bookInfo2 = new BookInfo("james", "bond", "1980");
+        Book book1 = new Book("james", "bond", "1980");
+        Book book2 = new Book("james", "bond", "1980");
 
-        assertEquals(bookInfo1, bookInfo2);
+        assertEquals(book1, book2);
     }
 }

@@ -1,12 +1,12 @@
 //has information about the book, and displays it
 package com.tw.biblioteca;
 
-public class BookInfo {
+public class Book {
     private String name;
     private String author;
     private String yearOfPublication;
 
-    public BookInfo(String name, String author, String yearOfPublication) {
+    public Book(String name, String author, String yearOfPublication) {
         this.name = name;
         this.author = author;
         this.yearOfPublication = yearOfPublication;
@@ -18,13 +18,13 @@ public class BookInfo {
 
     @Override
     public boolean equals(Object that) {
-        if (!(that instanceof BookInfo)) {
+        if (!(that instanceof Book)) {
             return false;
         }
         if(this == that) {
             return true;
         }
-        BookInfo thatLine = (BookInfo) that;
+        Book thatLine = (Book) that;
         if(this.name.equals(thatLine.name)) {
             return true;
         }

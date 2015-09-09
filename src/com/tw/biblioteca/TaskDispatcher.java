@@ -3,23 +3,23 @@ package com.tw.biblioteca;
 
 public class TaskDispatcher {
     private int chosenOption;
-    private BookInfoList bookInfoList;
+    private Library library;
 
-    public TaskDispatcher(int chosenOption, BookInfoList bookInfoList) {
+    public TaskDispatcher(int chosenOption, Library library) {
         this.chosenOption = chosenOption;
-        this.bookInfoList = bookInfoList;
+        this.library = library;
     }
 
 
     public void dispatch() {
         switch (chosenOption) {
             case 1:
-                bookInfoList.printList();
+                library.printList();
                 break;
             case 2:
                 System.exit(0);
             case 3:
-                Librarian librarian = new Librarian(bookInfoList);
+                Librarian librarian = new Librarian(library);
                 librarian.checkout();
         }
     }

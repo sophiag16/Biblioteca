@@ -31,12 +31,12 @@ public class LibrarianTest {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        BookInfoList bookInfoList = mock(BookInfoList.class);
-        Librarian librarian = new Librarian(bookInfoList);
+        Library library = mock(Library.class);
+        Librarian librarian = new Librarian(library);
 
         librarian.checkout();
 
-        Mockito.verify(bookInfoList, times(1)).remove(input);
+        Mockito.verify(library, times(1)).remove(input);
     }
 
     @Test
@@ -44,8 +44,8 @@ public class LibrarianTest {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        BookInfoList bookInfoList = new BookInfoList();
-        Librarian librarian = new Librarian(bookInfoList);
+        Library library = new Library();
+        Librarian librarian = new Librarian(library);
 
         librarian.checkout();
 
@@ -58,8 +58,8 @@ public class LibrarianTest {
         String input = "Harry";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        BookInfoList bookInfoList = new BookInfoList();
-        Librarian librarian = new Librarian(bookInfoList);
+        Library library = new Library();
+        Librarian librarian = new Librarian(library);
 
         librarian.checkout();
 

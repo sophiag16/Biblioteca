@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="precise64" name="com.tw.biblioteca.MenuTest" tests="6" time="0.027" timestamp="2015-09-09T05:16:09">
+<testsuite errors="0" failures="0" hostname="precise64" name="com.tw.biblioteca.LibraryTest" tests="2" time="0.012" timestamp="2015-09-09T05:16:09">
   <properties>
     <property name="ant.project.invoked-targets" value="coverage" />
     <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
@@ -69,12 +69,8 @@
     <property name="ant.file.type" value="file" />
     <property name="sun.cpu.isalist" value="" />
   </properties>
-  <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosenforOption1" time="0.002" />
-  <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosenforOption2" time="0.001" />
-  <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosenforOption3" time="0.002" />
-  <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosenforOption4" time="0.002" />
-  <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnInvalidOptionMessage" time="0.002" />
-  <testcase classname="com.tw.biblioteca.MenuTest" name="shouldDisplayMenuOptions" time="0.001" />
+  <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldNotDisplayCheckedOutBooks" time="0.001" />
+  <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldDisplayListOfBookInformation" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -9,7 +9,7 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class BookInfoListTest {
+public class LibraryTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
     @Before
@@ -24,9 +24,9 @@ public class BookInfoListTest {
 
     @Test
     public void shouldDisplayListOfBookInformation() {
-        BookInfoList bookInfoList = new BookInfoList();
+        Library library = new Library();
 
-        bookInfoList.printList();
+        library.printList();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "Harry Potter\tJ K Rowling\t2001\n" +
@@ -36,10 +36,10 @@ public class BookInfoListTest {
 
     @Test
     public void shouldNotDisplayCheckedOutBooks() {
-        BookInfoList bookInfoList = new BookInfoList();
+        Library library = new Library();
 
-        bookInfoList.remove("Harry Potter");
-        bookInfoList.printList();
+        library.remove("Harry Potter");
+        library.printList();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +

@@ -2,7 +2,7 @@
 package com.tw.biblioteca;
 
 public class BibliotecaApp {
-    private BookInfoList bookInfoList = new BookInfoList();
+    private Library library = new Library();
 
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
@@ -14,7 +14,7 @@ public class BibliotecaApp {
         welcomeMessage.display();
         do {
             Menu menu = new Menu();
-            TaskDispatcher taskDispatcher = new TaskDispatcher(menu.chosenOption(), bookInfoList);
+            TaskDispatcher taskDispatcher = new TaskDispatcher(menu.chosenOption(), library);
             taskDispatcher.dispatch();
         }while(true);
     }
