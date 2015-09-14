@@ -97,4 +97,16 @@ public class MenuTest {
 
         assertEquals(4, choice);
     }
+
+    @Test
+    public void shouldReturnInvalidOptionMessageForInvalidNumericOption() {
+        Menu menu = new Menu();
+        String input = "0";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        int choice = menu.chosenOption();
+
+        assertEquals(0, choice);
+    }
 }

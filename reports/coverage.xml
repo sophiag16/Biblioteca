@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9433962264150944" branch-rate="0.8387096774193549" lines-covered="100" lines-valid="106" branches-covered="26" branches-valid="31" complexity="2.3" version="2.1.1" timestamp="1442211647395">
+<coverage line-rate="0.9433962264150944" branch-rate="0.8387096774193549" lines-covered="100" lines-valid="106" branches-covered="26" branches-valid="31" complexity="2.3" version="2.1.1" timestamp="1442213815775">
 	<sources>
 		<source>src</source>
 	</sources>
@@ -310,20 +310,20 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="10" hits="7" branch="false"/>
-								<line number="12" hits="7" branch="false"/>
-								<line number="13" hits="7" branch="false"/>
-								<line number="14" hits="7" branch="false"/>
-								<line number="15" hits="7" branch="false"/>
-								<line number="16" hits="7" branch="false"/>
-								<line number="17" hits="7" branch="false"/>
+								<line number="10" hits="8" branch="false"/>
+								<line number="12" hits="8" branch="false"/>
+								<line number="13" hits="8" branch="false"/>
+								<line number="14" hits="8" branch="false"/>
+								<line number="15" hits="8" branch="false"/>
+								<line number="16" hits="8" branch="false"/>
+								<line number="17" hits="8" branch="false"/>
 							</lines>
 						</method>
 						<method name="chosenOption" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="28" hits="7" branch="false"/>
-								<line number="30" hits="7" branch="false"/>
-								<line number="31" hits="7" branch="false"/>
+								<line number="28" hits="8" branch="false"/>
+								<line number="30" hits="8" branch="false"/>
+								<line number="31" hits="8" branch="false"/>
 								<line number="32" hits="1" branch="false"/>
 								<line number="33" hits="1" branch="false"/>
 							</lines>
@@ -359,13 +359,13 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="10" hits="7" branch="false"/>
-						<line number="12" hits="7" branch="false"/>
-						<line number="13" hits="7" branch="false"/>
-						<line number="14" hits="7" branch="false"/>
-						<line number="15" hits="7" branch="false"/>
-						<line number="16" hits="7" branch="false"/>
-						<line number="17" hits="7" branch="false"/>
+						<line number="10" hits="8" branch="false"/>
+						<line number="12" hits="8" branch="false"/>
+						<line number="13" hits="8" branch="false"/>
+						<line number="14" hits="8" branch="false"/>
+						<line number="15" hits="8" branch="false"/>
+						<line number="16" hits="8" branch="false"/>
+						<line number="17" hits="8" branch="false"/>
 						<line number="20" hits="5" branch="false"/>
 						<line number="22" hits="5" branch="false"/>
 						<line number="23" hits="5" branch="true" condition-coverage="50% (1/2)">
@@ -374,9 +374,9 @@
 							</conditions>
 						</line>
 						<line number="24" hits="5" branch="false"/>
-						<line number="28" hits="7" branch="false"/>
-						<line number="30" hits="7" branch="false"/>
-						<line number="31" hits="7" branch="false"/>
+						<line number="28" hits="8" branch="false"/>
+						<line number="30" hits="8" branch="false"/>
+						<line number="31" hits="8" branch="false"/>
 						<line number="32" hits="1" branch="false"/>
 						<line number="33" hits="1" branch="false"/>
 						<line number="39" hits="12" branch="true" condition-coverage="50% (1/2)">
