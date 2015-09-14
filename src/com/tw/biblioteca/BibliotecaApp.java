@@ -14,7 +14,7 @@ public class BibliotecaApp {
         welcomeMessage.display();
         do {
             Menu menu = new Menu();
-            TaskDispatcher taskDispatcher = new TaskDispatcher(menu.chosenOption(), library);
+            TaskDispatcher taskDispatcher = new TaskDispatcher(menu.chosenValidOption(), library);
             taskDispatcher.dispatch();
         }while(true);
     }
