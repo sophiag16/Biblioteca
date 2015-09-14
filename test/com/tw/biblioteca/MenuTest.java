@@ -35,7 +35,8 @@ public class MenuTest {
         assertEquals("1. List Books\n" +
                 "2. Quit\n" +
                 "3. Checkout Book\n" +
-                "4. Return Book\n", byteArrayOutputStream.toString());
+                "4. Return Book\n" +
+                "5. List Movies\n", byteArrayOutputStream.toString());
     }
 
     @Test
