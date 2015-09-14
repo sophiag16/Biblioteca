@@ -35,7 +35,7 @@ public class Menu {
 
     }
 
-    private boolean isChoiceValid(int choice) {
+    boolean isChoiceValid(int choice) {
         for (int i = 1; i <= menuOptions.size(); i++) {
             if (choice == i)
                 return true;
