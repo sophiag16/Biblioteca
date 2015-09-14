@@ -1,4 +1,4 @@
-//reads valid choice from user
+//has a list of options and reads a choice from user
 package com.tw.biblioteca;
 
 import com.sun.deploy.util.StringUtils;
@@ -16,31 +16,9 @@ public class Menu {
         menuOptions.add("4. Return Book");
     }
 
-    public int chosenValidOption() {
-        int choice = 0;
-        do {
-            choice = chosenOption();
-        } while (!isChoiceValid(choice));
-        return choice;
-    }
-
-    public int chosenOption() {
+    public String chosenOption() {
         System.out.println(StringUtils.join(menuOptions, "\n"));
-        try {
-            Scanner scanner = new Scanner(System.in);
-            return scanner.nextInt();
-        } catch (Exception e) {
-            return 0;
-        }
-
-    }
-
-    boolean isChoiceValid(int choice) {
-        for (int i = 1; i <= menuOptions.size(); i++) {
-            if (choice == i)
-                return true;
-        }
-        System.out.println("Invalid option");
-        return false;
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 }

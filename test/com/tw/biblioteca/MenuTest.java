@@ -30,7 +30,7 @@ public class MenuTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
 
-        int choice = menu.chosenOption();
+        menu.chosenOption();
 
         assertEquals("1. List Books\n" +
                 "2. Quit\n" +
@@ -39,77 +39,12 @@ public class MenuTest {
     }
 
     @Test
-    public void shouldReturnMenuOptionChosenforOption1() {
+    public void shouldReturnMenuOptionChosen() {
         Menu menu = new Menu();
-        String input = "1";
+        String input = "some option";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
 
-        int choice = menu.chosenValidOption();
-
-        assertEquals(1, choice);
-    }
-
-    @Test
-    public void shouldReturnInvalidOptionMessage() {
-        Menu menu = new Menu();
-        String input = "w";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-
-        int choice = menu.chosenOption();
-
-        assertEquals(0, choice);
-    }
-
-    @Test
-    public void shouldReturnMenuOptionChosenforOption2() {
-        Menu menu = new Menu();
-        String input = "2";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-
-        int choice = menu.chosenValidOption();
-
-        assertEquals(2, choice);
-    }
-
-    @Test
-    public void shouldReturnMenuOptionChosenforOption3() {
-        Menu menu = new Menu();
-        String input = "3";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-
-        int choice = menu.chosenValidOption();
-
-        assertEquals(3, choice);
-    }
-
-    @Test
-    public void shouldReturnMenuOptionChosenforOption4() {
-        Menu menu = new Menu();
-        String input = "4";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-
-        int choice = menu.chosenValidOption();
-
-        assertEquals(4, choice);
-    }
-
-    @Test
-    public void shouldReturnFalseForInvalidNumericOption() {
-        Menu menu = new Menu();
-
-        assertEquals(false, menu.isChoiceValid(0));
-    }
-
-    @Test
-    public void shouldReturnInvalidOptionMessageForInvalidNumericOption() {
-        Menu menu = new Menu();
-        menu.isChoiceValid(0);
-
-        assertEquals("Invalid option\n", byteArrayOutputStream.toString());
+        assertEquals(input, menu.chosenOption());
     }
 }

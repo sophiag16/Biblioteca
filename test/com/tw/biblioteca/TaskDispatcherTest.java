@@ -33,7 +33,7 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldDisplayListOfBooksIfOptionOneIsChosen() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher(1, new Library());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("1", new Library(), new Menu());
 
         taskDispatcher.dispatch();
 
@@ -46,7 +46,7 @@ public class TaskDispatcherTest {
     @Test
     public void shouldExitIfOptionTwoIsChosen() {
         exit.expectSystemExit();
-        TaskDispatcher taskDispatcher = new TaskDispatcher(2, new Library());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("2", new Library(), new Menu());
         taskDispatcher.dispatch();
     }
 
@@ -56,8 +56,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        LibraryController libraryController = mock(LibraryController.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher(3, library);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("3", library, new Menu());
 
         taskDispatcher.dispatch();
 
@@ -70,10 +69,22 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher(4, library);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Menu());
 
         taskDispatcher.dispatch();
 
         Mockito.verify(library, times(1)).addBook(input);
+    }
+
+    @Test
+    public void shouldDisplayInvalidMessageWhenInvalidOptionIsChosen() {
+        String input = "1";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Menu menu = new Menu();
+        TaskDispatcher taskDispatcher = new TaskDispatcher("0", new Library(), menu);
+        taskDispatcher.dispatch();
+
+        assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
     }
 }
