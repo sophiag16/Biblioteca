@@ -1,4 +1,4 @@
-//reads choice from user
+//reads valid choice from user
 package com.tw.biblioteca;
 
 import com.sun.deploy.util.StringUtils;
