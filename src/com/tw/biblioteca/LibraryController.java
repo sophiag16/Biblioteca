@@ -11,7 +11,7 @@ public class LibraryController {
     }
 
     public void issueBook() {
-        System.out.println("Enter the name of book to issueBook");
+        System.out.println("Enter the name of book to be issued");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
         if(library.removeBook(bookName))
@@ -21,7 +21,7 @@ public class LibraryController {
     }
 
     public void returnBook() {
-        System.out.println("Enter the name of book to issueBook");
+        System.out.println("Enter the name of book to return");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
         if(library.addBook(bookName))

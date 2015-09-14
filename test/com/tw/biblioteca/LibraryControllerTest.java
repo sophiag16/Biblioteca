@@ -50,7 +50,7 @@ public class LibraryControllerTest {
 
         libraryController.issueBook();
 
-        assertEquals("Enter the name of book to issueBook\n" +
+        assertEquals("Enter the name of book to be issued\n" +
                 "Thank you! Enjoy the book\n", byteArrayOutputStream.toString());
     }
 
@@ -64,7 +64,7 @@ public class LibraryControllerTest {
 
         libraryController.issueBook();
 
-        assertEquals("Enter the name of book to issueBook\n" +
+        assertEquals("Enter the name of book to be issued\n" +
                 "That book is not available\n", byteArrayOutputStream.toString());
     }
 
@@ -92,7 +92,7 @@ public class LibraryControllerTest {
 
         libraryController.returnBook();
 
-        assertEquals("Enter the name of book to issueBook\n" +
+        assertEquals("Enter the name of book to return\n" +
                 "Thank you for returning the book.\n", byteArrayOutputStream.toString());
     }
 
@@ -107,7 +107,7 @@ public class LibraryControllerTest {
 
         libraryController.returnBook();
 
-        assertEquals("Enter the name of book to issueBook\n" +
+        assertEquals("Enter the name of book to return\n" +
                 "That is not a valid book to return.\n", byteArrayOutputStream.toString());
     }
 }
