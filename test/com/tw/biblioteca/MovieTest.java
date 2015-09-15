@@ -30,4 +30,19 @@ public class MovieTest {
 
         assertEquals("Titanic\tJames Cameron\t1997\t8\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldBeEqualToItself() {
+        Movie movie = new Movie("Titanic", "James Cameron", "1997", "8");
+
+        assertEquals(movie, movie);
+    }
+
+    @Test
+    public void shoulBeEqualToAnotherSameMovie() {
+        Movie movie1 = new Movie("Titanic", "James Cameron", "1997", "8");
+        Movie movie2 = new Movie("Titanic", "James Cameron", "1997", "8");
+
+        assertEquals(movie1, movie2);
+    }
 }

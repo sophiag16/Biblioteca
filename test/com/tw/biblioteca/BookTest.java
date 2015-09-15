@@ -54,7 +54,7 @@ public class BookTest {
     }
 
     @Test
-    public void shoulNotBeEqualToAnotherBook() {
+    public void shoulBeEqualToAnotherSameBook() {
         Book book1 = new Book("james", "bond", "1980");
         Book book2 = new Book("james", "bond", "1980");
 

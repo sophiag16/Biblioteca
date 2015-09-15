@@ -17,4 +17,16 @@ public class Movie {
     public void printInfo() {
         System.out.println(name + "\t" + director + "\t" + year + "\t" + rating);
     }
+
+    @Override
+    public boolean equals(Object that) {
+        if(this == that) {
+            return true;
+        }
+        Movie thatMovie = (Movie) that;
+        if(this.name.equals(thatMovie.name)) {
+            return true;
+        }
+        return false;
+    }
 }
