@@ -87,4 +87,14 @@ public class TaskDispatcherTest {
 
         assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
     }
+
+    @Test
+    public void shouldCallPrintMoviesIfOptionFiveIsChosen() {
+        Library library = mock(Library.class);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("5", library, new Menu());
+
+        taskDispatcher.dispatch();
+
+        Mockito.verify(library, times(1)).printMovies();
+    }
 }
