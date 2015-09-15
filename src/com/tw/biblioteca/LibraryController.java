@@ -33,5 +33,8 @@ public class LibraryController {
 
     public void issueMovie() {
         System.out.println("Enter the name of movie to be issued");
+        Scanner scanner = new Scanner(System.in);
+        String movieName = scanner.nextLine();
+        library.removeMovie(movieName);
     }
 }
