@@ -16,7 +16,7 @@ public class User {
         if(this == that)
             return true;
         User thatUser = (User) that;
-        if(this.libraryNumber.equals(((User) that).libraryNumber)) {
+        if(this.libraryNumber.equals(thatUser.libraryNumber)) {
             return true;
         }
         return false;
