@@ -33,9 +33,6 @@ public class Book {
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + (author != null ? author.hashCode() : 0);
-        result = 31 * result + (yearOfPublication != null ? yearOfPublication.hashCode() : 0);
-        return result;
+        return name.hashCode();
     }
 }
