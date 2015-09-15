@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class MovieTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -44,5 +45,12 @@ public class MovieTest {
         Movie movie2 = new Movie("Titanic", "James Cameron", "1997", "8");
 
         assertEquals(movie1, movie2);
+    }
+
+    @Test
+    public void shouldNotBeEqualToAString() {
+        Movie movie = new Movie("Titanic", "James Cameron", "1997", "8");
+
+        assertNotEquals(movie, "someBook");
     }
 }

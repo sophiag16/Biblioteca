@@ -20,6 +20,9 @@ public class Movie {
 
     @Override
     public boolean equals(Object that) {
+        if (!(that instanceof Movie)) {
+            return false;
+        }
         if(this == that) {
             return true;
         }
