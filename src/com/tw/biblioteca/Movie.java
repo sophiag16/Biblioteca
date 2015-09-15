@@ -32,4 +32,9 @@ public class Movie {
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
 }

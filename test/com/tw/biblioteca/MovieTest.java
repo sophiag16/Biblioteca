@@ -61,4 +61,19 @@ public class MovieTest {
 
         assertNotEquals(movie1, movie2);
     }
+
+    @Test
+    public void shouldCompareAMovieToItselfUsingHashcode() {
+        Movie movie = new Movie("Titanic", "James Cameron", "1997", "8");
+
+        assertEquals(movie.hashCode(), movie.hashCode());
+    }
+
+    @Test
+    public void shouldCompareTwoUnequalBooksUsingHashcode() {
+        Movie movie1 = new Movie("Titanic", "James Cameron", "1997", "8");
+        Movie movie2 = new Movie("Inception", "Christopher Nolan", "2010", "8");
+
+        assertNotEquals(movie1.hashCode(), movie2.hashCode());
+    }
 }
