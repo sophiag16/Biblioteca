@@ -110,4 +110,14 @@ public class LibraryControllerTest {
         assertEquals("Enter the name of book to return\n" +
                 "That is not a valid book to return.\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldDisplayRequestToEnterBookName() {
+        Library library = new Library();
+        LibraryController libraryController = new LibraryController(library);
+
+        libraryController.issueMovie();
+
+        assertEquals("Enter the name of movie to be issued\n", byteArrayOutputStream.toString());
+    }
 }

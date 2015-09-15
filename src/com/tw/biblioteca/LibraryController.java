@@ -30,4 +30,8 @@ public class LibraryController {
             System.out.println("That is not a valid book to return.");
 
     }
+
+    public void issueMovie() {
+        System.out.println("Enter the name of movie to be issued");
+    }
 }
