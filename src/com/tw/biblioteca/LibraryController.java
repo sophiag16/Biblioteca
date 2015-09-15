@@ -36,5 +36,6 @@ public class LibraryController {
         Scanner scanner = new Scanner(System.in);
         String movieName = scanner.nextLine();
         library.removeMovie(movieName);
+        System.out.println("Thank you! Enjoy the movie");
     }
 }

@@ -112,19 +112,6 @@ public class LibraryControllerTest {
     }
 
     @Test
-    public void shouldDisplayRequestToEnterMovieName() {
-        String input = "Titanic";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-        Library library = new Library();
-        LibraryController libraryController = new LibraryController(library);
-
-        libraryController.issueMovie();
-
-        assertEquals("Enter the name of movie to be issued\n", byteArrayOutputStream.toString());
-    }
-
-    @Test
     public void shouldAcceptValidMovieNameFromUserAndRemoveTheBook() {
         String input = "Titanic";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
@@ -135,5 +122,19 @@ public class LibraryControllerTest {
         libraryController.issueMovie();
 
         Mockito.verify(library, times(1)).removeMovie(input);
+    }
+
+    @Test
+    public void shouldDisplaySuccessMessageForSuccessfulCheckoutofMovie() {
+        String input = "Titanic";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Library library = new Library();
+        LibraryController libraryController = new LibraryController(library);
+
+        libraryController.issueMovie();
+
+        assertEquals("Enter the name of movie to be issued\n" +
+                "Thank you! Enjoy the movie\n", byteArrayOutputStream.toString());
     }
 }
