@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="0" name="BibliotecaAppTest" package="com.tw.biblioteca" skipped="0" tests="1" time="0.333" timestamp="2015-09-15T01:36:12">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="0" name="BibliotecaAppTest" package="com.tw.biblioteca" skipped="0" tests="1" time="0.294" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -94,7 +94,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -148,14 +148,14 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.BibliotecaAppTest" name="shouldExitWhenQuitIsChosen" time="0.268" />
+      <testcase classname="com.tw.biblioteca.BibliotecaAppTest" name="shouldExitWhenQuitIsChosen" time="0.235" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="1" name="BookTest" package="com.tw.biblioteca" skipped="0" tests="7" time="0.01" timestamp="2015-09-15T01:36:12">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="1" name="BookTest" package="com.tw.biblioteca" skipped="0" tests="7" time="0.008" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -249,7 +249,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -303,9 +303,9 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.BookTest" name="shouldBeEqualToItself" time="0.0" />
+      <testcase classname="com.tw.biblioteca.BookTest" name="shouldBeEqualToItself" time="0.001" />
 
-      <testcase classname="com.tw.biblioteca.BookTest" name="shouldNotBeEqualToAString" time="0.0" />
+      <testcase classname="com.tw.biblioteca.BookTest" name="shouldNotBeEqualToAString" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.BookTest" name="shouldCompareTwoEqualBooksUsingHashcode" time="0.0" />
 
@@ -313,7 +313,7 @@
 
       <testcase classname="com.tw.biblioteca.BookTest" name="shoulNotBeEqualToNull" time="0.0" />
 
-      <testcase classname="com.tw.biblioteca.BookTest" name="shoulNotBeEqualToAnotherBook" time="0.0" />
+      <testcase classname="com.tw.biblioteca.BookTest" name="shoulNotBeEqualToAnotherBook" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.BookTest" name="shouldCompareABookToItselfUsingHashcode" time="0.0" />
 
@@ -322,7 +322,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="2" name="LibraryControllerTest" package="com.tw.biblioteca" skipped="0" tests="6" time="0.151" timestamp="2015-09-15T01:36:12">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="2" name="LibraryControllerTest" package="com.tw.biblioteca" skipped="0" tests="6" time="0.149" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -416,7 +416,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -470,7 +470,7 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.LibraryControllerTest" name="shouldDisplayFailureMessageForUnsuccessfulReturnAttempt" time="0.136" />
+      <testcase classname="com.tw.biblioteca.LibraryControllerTest" name="shouldDisplayFailureMessageForUnsuccessfulReturnAttempt" time="0.134" />
 
       <testcase classname="com.tw.biblioteca.LibraryControllerTest" name="shouldDisplaySuccessMessageForSuccessfulCheckout" time="0.001" />
 
@@ -487,7 +487,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="3" name="LibraryTest" package="com.tw.biblioteca" skipped="0" tests="8" time="0.008" timestamp="2015-09-15T01:36:12">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="3" name="LibraryTest" package="com.tw.biblioteca" skipped="0" tests="8" time="0.009" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -581,7 +581,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -635,17 +635,17 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldDisplayListOfMovies" time="0.0" />
+      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldDisplayListOfMovies" time="0.001" />
 
-      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldNotDisplayCheckedOutBooks" time="0.001" />
+      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldNotDisplayCheckedOutBooks" time="0.0" />
 
       <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldReturnTrueIfSuccessfullyReturned" time="0.0" />
 
-      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldReturnFalseIfFailedToReturn" time="0.0" />
+      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldReturnFalseIfFailedToReturn" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldDisplayListOfBookInformation" time="0.0" />
 
-      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldAgainDisplayReturnedBooks" time="0.0" />
+      <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldAgainDisplayReturnedBooks" time="0.001" />
 
       <testcase classname="com.tw.biblioteca.LibraryTest" name="shouldReturnTrueIfSuccessfullyIssued" time="0.0" />
 
@@ -656,7 +656,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="4" name="MenuTest" package="com.tw.biblioteca" skipped="0" tests="2" time="0.005" timestamp="2015-09-15T01:36:12">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="4" name="MenuTest" package="com.tw.biblioteca" skipped="0" tests="2" time="0.005" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -750,7 +750,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -806,14 +806,14 @@
 
       <testcase classname="com.tw.biblioteca.MenuTest" name="shouldReturnMenuOptionChosen" time="0.001" />
 
-      <testcase classname="com.tw.biblioteca.MenuTest" name="shouldDisplayMenuOptions" time="0.001" />
+      <testcase classname="com.tw.biblioteca.MenuTest" name="shouldDisplayMenuOptions" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="5" name="MovieTest" package="com.tw.biblioteca" skipped="0" tests="1" time="0.004" timestamp="2015-09-15T01:36:12">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="5" name="MovieTest" package="com.tw.biblioteca" skipped="0" tests="1" time="0.004" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -907,7 +907,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -961,14 +961,14 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.MovieTest" name="shouldDisplayInformationAboutMovie" time="0.0" />
+      <testcase classname="com.tw.biblioteca.MovieTest" name="shouldDisplayInformationAboutMovie" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="6" name="TaskDispatcherTest" package="com.tw.biblioteca" skipped="0" tests="6" time="0.009" timestamp="2015-09-15T01:36:13">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="6" name="TaskDispatcherTest" package="com.tw.biblioteca" skipped="0" tests="6" time="0.009" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1062,7 +1062,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1122,18 +1122,18 @@
 
       <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldDisplayListOfBooksIfOptionOneIsChosen" time="0.0" />
 
-      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldReturnBookIfOptionFourIsChosen" time="0.001" />
+      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldReturnBookIfOptionFourIsChosen" time="0.0" />
 
       <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldDisplayInvalidMessageWhenInvalidOptionIsChosen" time="0.0" />
 
-      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldCallPrintMoviesIfOptionFiveIsChosen" time="0.0" />
+      <testcase classname="com.tw.biblioteca.TaskDispatcherTest" name="shouldCallPrintMoviesIfOptionFiveIsChosen" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="7" name="WelcomeMessageTest" package="com.tw.biblioteca" skipped="0" tests="1" time="0.004" timestamp="2015-09-15T01:36:13">
+  <testsuite errors="0" failures="0" hostname="INsophiag.local" id="7" name="WelcomeMessageTest" package="com.tw.biblioteca" skipped="0" tests="1" time="0.004" timestamp="2015-09-15T01:43:37">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1227,7 +1227,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases718370357508427309.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher5655861501924925991.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit3318343072119237355.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junittestcases1170298976475412597.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/sophiag/IdeaProjects/Biblioteca2/reports/IGNORETHIS.xml crashfile=/Users/sophiag/IdeaProjects/Biblioteca2/junitvmwatcher8052395284684757669.properties propsfile=/Users/sophiag/IdeaProjects/Biblioteca2/junit2746089827168428040.properties" />
 
           <property name="java.class.path" value="/Users/sophiag/IdeaProjects/Biblioteca2/instrumented:/Users/sophiag/IdeaProjects/Biblioteca2/lib/junit-4.12.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/deploy.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/system-rules-1.12.0.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/mockito-all-1.9.5.jar:/Users/sophiag/IdeaProjects/Biblioteca2/out:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-javadoc.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1-sources.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/cobertura-2.1.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-analysis-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-commons-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-tree-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/asm-util-5.0.1.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/commons-lang3-3.3.2.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/hamcrest-core-1.3.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jaxen-1.1.4.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/jetty-util-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/junit-4.11.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-classic-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/logback-core-1.0.13.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/oro-2.0.8.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/servlet-api-2.5-6.1.14.jar:/Users/sophiag/IdeaProjects/Biblioteca2/lib/cobertura-2.1.1/lib/slf4j-api-1.7.5.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
 
@@ -1281,7 +1281,7 @@
 
       </properties>
 
-      <testcase classname="com.tw.biblioteca.WelcomeMessageTest" name="shouldPrintTheWelcomeMessage" time="0.0" />
+      <testcase classname="com.tw.biblioteca.WelcomeMessageTest" name="shouldPrintTheWelcomeMessage" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 

@@ -15,6 +15,7 @@ public class Menu {
         menuOptions.add("3. Checkout Book");
         menuOptions.add("4. Return Book");
         menuOptions.add("5. List Movies");
+        menuOptions.add("6. Checkout Movie");
     }
 
     public String chosenOption() {

@@ -36,7 +36,8 @@ public class MenuTest {
                 "2. Quit\n" +
                 "3. Checkout Book\n" +
                 "4. Return Book\n" +
-                "5. List Movies\n", byteArrayOutputStream.toString());
+                "5. List Movies\n" +
+                "6. Checkout Movie\n", byteArrayOutputStream.toString());
     }
 
     @Test
