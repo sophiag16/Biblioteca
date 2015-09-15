@@ -53,4 +53,12 @@ public class MovieTest {
 
         assertNotEquals(movie, "someBook");
     }
+
+    @Test
+    public void shoulBeUnequalToAnotherMovieWithDifferentName() {
+        Movie movie1 = new Movie("Titanic", "James Cameron", "1997", "8");
+        Movie movie2 = new Movie("Inception", "Christopher Nolan", "2010", "8");
+
+        assertNotEquals(movie1, movie2);
+    }
 }
