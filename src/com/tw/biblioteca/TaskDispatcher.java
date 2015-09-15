@@ -29,6 +29,9 @@ public class TaskDispatcher {
             case "5":
                 library.printMovies();
                 break;
+            case "6":
+                new LibraryController(library).issueMovie();
+                break;
             default:
                 System.out.println("Invalid option");
                 String choice = menu.chosenOption();

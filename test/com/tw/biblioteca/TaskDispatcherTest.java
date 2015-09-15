@@ -97,4 +97,17 @@ public class TaskDispatcherTest {
 
         Mockito.verify(library, times(1)).printMovies();
     }
+
+    @Test
+    public void shouldCallRemoveMovieIfOptionFiveIsChosen() {
+        String input = "Titanic";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Library library = mock(Library.class);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("6", library, new Menu());
+
+        taskDispatcher.dispatch();
+
+        Mockito.verify(library, times(1)).removeMovie(input);
+    }
 }
