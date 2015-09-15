@@ -3,7 +3,6 @@ package com.tw.biblioteca;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -64,6 +63,7 @@ public class BookTest {
     @Test
     public void shouldCompareABookToItselfUsingHashcode() {
         Book book = new Book("james", "bond", "1980");
+
         assertEquals(book.hashCode(), book.hashCode());
     }
 
@@ -71,6 +71,7 @@ public class BookTest {
     public void shouldCompareTwoEqualBooksUsingHashcode() {
         Book book1 = new Book("james", "bond", "1980");
         Book book2 = new Book("james", "bond", "1980");
+
         assertEquals(book1.hashCode(), book2.hashCode());
     }
 }
