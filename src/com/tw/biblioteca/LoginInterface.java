@@ -11,7 +11,12 @@ public class LoginInterface {
     }
 
     public String readLibraryNumber() {
-        System.out.println("Enter the library number: ");
+        System.out.println("Enter your library number: ");
+        return scanner.nextLine();
+    }
+
+    public String readPassword() {
+        System.out.println("Enter your password: ");
         return scanner.nextLine();
     }
 }

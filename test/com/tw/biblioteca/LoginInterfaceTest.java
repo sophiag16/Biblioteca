@@ -32,4 +32,14 @@ public class LoginInterfaceTest {
 
         assertEquals(input.toString(), loginInterface.readLibraryNumber().toString());
     }
+
+    @Test
+    public void shouldAcceptPasswordFromUser() {
+        String input = "abcxyz";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        LoginInterface loginInterface = new LoginInterface(new Scanner(inContent));
+
+        assertEquals(input.toString(), loginInterface.readPassword().toString());
+    }
 }
