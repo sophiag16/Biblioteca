@@ -1,4 +1,4 @@
-//has a set of book and handles it
+//has a set of book and movies and handles them
 package com.tw.biblioteca;
 
 import java.util.ArrayList;
@@ -22,6 +22,12 @@ public class Library {
         System.out.print("Name\tAuthor\tYear of Publishing\n");
         for(int i = 0; i < availableBookArrayList.size(); i++)
             availableBookArrayList.get(i).printInfo();
+    }
+
+    public void printMovies() {
+        System.out.print("Name\tYear\tDirector\tRating\n");
+        for(int i = 0; i < moviesArrayList.size(); i++)
+            moviesArrayList.get(i).printInfo();
     }
 
     public boolean removeBook(String bookName) {

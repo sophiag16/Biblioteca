@@ -89,4 +89,16 @@ public class LibraryTest {
 
         assertEquals(false, library.addBook("Harry"));
     }
+
+    @Test
+    public void shouldDisplayListOfMovies() {
+        Library library = new Library();
+
+        library.printMovies();
+
+        assertEquals("Name\tYear\tDirector\tRating\n" +
+                "Titanic\tJames Cameron\t1997\t8\n" +
+                "Pursuit Of Happyness\tGabriele Muccino\t2006\t8\n" +
+                "Inception\tChristopher Nolan\t2010\t8\n", byteArrayOutputStream.toString());
+    }
 }
