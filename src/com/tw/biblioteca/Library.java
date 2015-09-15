@@ -56,6 +56,7 @@ public class Library {
         Movie movie = new Movie(movieName, null, null, null);
         if(moviesArrayList.contains(movie)) {
             moviesArrayList.remove(movie);
+            return true;
         }
         return false;
     }

@@ -120,4 +120,11 @@ public class LibraryTest {
 
         assertEquals(false, library.removeMovie("Godzilla"));
     }
+
+    @Test
+    public void shouldReturnTrueIfSuccessfullyCheckoutMovie() {
+        Library library = new Library();
+
+        assertEquals(true, library.removeMovie("Titanic"));
+    }
 }
