@@ -18,4 +18,14 @@ public class AuthenticatorTest {
 
         assertEquals(true, authenticator.isValid(new LoginInterface(new Scanner(System.in)).libraryNumber()));
     }
+
+    @Test
+    public void shouldFailAuthenticatingAUserWithInvalidLibraryNumber() {
+        String input = "111-8755";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Authenticator authenticator = new Authenticator();
+
+        assertEquals(false, authenticator.isValid(new LoginInterface(new Scanner(System.in)).libraryNumber()));
+    }
 }
