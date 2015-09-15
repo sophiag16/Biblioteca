@@ -113,4 +113,11 @@ public class LibraryTest {
                 "Pursuit Of Happyness\tGabriele Muccino\t2006\t8\n" +
                 "Inception\tChristopher Nolan\t2010\t8\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldReturnFalseIfFailedToCheckoutMovie() {
+        Library library = new Library();
+
+        assertEquals(false, library.removeMovie("Godzilla"));
+    }
 }

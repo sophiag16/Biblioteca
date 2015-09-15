@@ -52,8 +52,11 @@ public class Library {
         }
     }
 
-    public void removeMovie(String movieName) {
+    public boolean removeMovie(String movieName) {
         Movie movie = new Movie(movieName, null, null, null);
-        moviesArrayList.remove(movie);
+        if(moviesArrayList.contains(movie)) {
+            moviesArrayList.remove(movie);
+        }
+        return false;
     }
 }
