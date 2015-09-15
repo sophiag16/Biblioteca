@@ -51,4 +51,9 @@ public class Library {
             return false;
         }
     }
+
+    public void removeMovie(String movieName) {
+        Movie movie = new Movie(movieName, null, null, null);
+        moviesArrayList.remove(movie);
+    }
 }
