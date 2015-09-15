@@ -137,4 +137,18 @@ public class LibraryControllerTest {
         assertEquals("Enter the name of movie to be issued\n" +
                 "Thank you! Enjoy the movie\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldDisplayFailMessageForUnsuccessfulCheckoutofMovie() {
+        String input = "Godzilla";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        Library library = new Library();
+        LibraryController libraryController = new LibraryController(library);
+
+        libraryController.issueMovie();
+
+        assertEquals("Enter the name of movie to be issued\n" +
+                "That movie is not available\n", byteArrayOutputStream.toString());
+    }
 }

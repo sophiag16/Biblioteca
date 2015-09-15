@@ -35,7 +35,9 @@ public class LibraryController {
         System.out.println("Enter the name of movie to be issued");
         Scanner scanner = new Scanner(System.in);
         String movieName = scanner.nextLine();
-        library.removeMovie(movieName);
-        System.out.println("Thank you! Enjoy the movie");
+        if(library.removeMovie(movieName))
+            System.out.println("Thank you! Enjoy the movie");
+        else
+            System.out.println("That movie is not available");
     }
 }
