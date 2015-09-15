@@ -6,14 +6,19 @@ import java.util.ArrayList;
 public class Library {
     private ArrayList<Book> availableBookArrayList = new ArrayList<Book>();
     private ArrayList<Book> issuedBookArrayList = new ArrayList<Book>();
+    private ArrayList<Movie> moviesArrayList = new ArrayList<Movie>();
 
     public Library() {
         availableBookArrayList.add(new Book("Harry Potter", "J K Rowling", "2001"));
         availableBookArrayList.add(new Book("To Kill A Mockingbird", "Harper Lee", "1970"));
         availableBookArrayList.add(new Book("A Brief History Of Time", "Stephen Hawking", "1988"));
+
+        moviesArrayList.add(new Movie("Titanic", "James Cameron", "1997", "8"));
+        moviesArrayList.add(new Movie("Pursuit Of Happyness", "Gabriele Muccino", "2006", "8"));
+        moviesArrayList.add(new Movie("Inception", "Christopher Nolan", "2010", "8"));
     }
 
-    public void printList() {
+    public void printBooks() {
         System.out.print("Name\tAuthor\tYear of Publishing\n");
         for(int i = 0; i < availableBookArrayList.size(); i++)
             availableBookArrayList.get(i).printInfo();

@@ -16,7 +16,7 @@ public class TaskDispatcher {
     public void dispatch() {
         switch (chosenOption) {
             case "1":
-                library.printList();
+                library.printBooks();
                 break;
             case "2":
                 System.exit(0);

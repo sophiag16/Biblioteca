@@ -26,7 +26,7 @@ public class LibraryTest {
     public void shouldDisplayListOfBookInformation() {
         Library library = new Library();
 
-        library.printList();
+        library.printBooks();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "Harry Potter\tJ K Rowling\t2001\n" +
@@ -39,7 +39,7 @@ public class LibraryTest {
         Library library = new Library();
 
         library.removeBook("Harry Potter");
-        library.printList();
+        library.printBooks();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
@@ -66,7 +66,7 @@ public class LibraryTest {
 
         library.removeBook("Harry Potter");
         library.addBook("Harry Potter");
-        library.printList();
+        library.printBooks();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
