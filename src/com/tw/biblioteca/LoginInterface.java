@@ -10,12 +10,12 @@ public class LoginInterface {
         this.scanner = scanner;
     }
 
-    public String readLibraryNumber() {
+    public String libraryNumber() {
         System.out.println("Enter your library number: ");
         return scanner.nextLine();
     }
 
-    public String readPassword() {
+    public String password() {
         System.out.println("Enter your password: ");
         return scanner.nextLine();
     }

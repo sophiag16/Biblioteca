@@ -30,7 +30,7 @@ public class LoginInterfaceTest {
         System.setIn(inContent);
         LoginInterface loginInterface = new LoginInterface(new Scanner(inContent));
 
-        assertEquals(input.toString(), loginInterface.readLibraryNumber().toString());
+        assertEquals(input.toString(), loginInterface.libraryNumber().toString());
     }
 
     @Test
@@ -40,6 +40,6 @@ public class LoginInterfaceTest {
         System.setIn(inContent);
         LoginInterface loginInterface = new LoginInterface(new Scanner(inContent));
 
-        assertEquals(input.toString(), loginInterface.readPassword().toString());
+        assertEquals(input.toString(), loginInterface.password().toString());
     }
 }
