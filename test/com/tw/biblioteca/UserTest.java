@@ -3,6 +3,7 @@ package com.tw.biblioteca;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class UserTest {
 
@@ -19,5 +20,13 @@ public class UserTest {
         User user2 = new User("444-5555");
 
         assertEquals(true, user1.equals(user2));
+    }
+
+    @Test
+    public void shouldNotEquateToAnotherUserDifferentLibraryNumber() {
+        User user1 = new User("444-5555");
+        User user2 = new User("222-9876");
+
+        assertNotEquals(true, user1.equals(user2));
     }
 }

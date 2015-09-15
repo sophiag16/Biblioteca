@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.974025974025974" branch-rate="0.8888888888888888" lines-covered="150" lines-valid="154" branches-covered="48" branches-valid="54" complexity="2.0" version="2.1.1" timestamp="1442330613110">
+<coverage line-rate="0.9748427672955975" branch-rate="0.896551724137931" lines-covered="155" lines-valid="159" branches-covered="52" branches-valid="58" complexity="2.1333333333333333" version="2.1.1" timestamp="1442331904076">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.biblioteca" line-rate="0.974025974025974" branch-rate="0.8888888888888888" complexity="2.0">
+		<package name="com.tw.biblioteca" line-rate="0.9748427672955975" branch-rate="0.896551724137931" complexity="2.1333333333333333">
 			<classes>
 				<class name="com.tw.biblioteca.BibliotecaApp" filename="com/tw/biblioteca/BibliotecaApp.java" line-rate="0.6666666666666666" branch-rate="1.0" complexity="1.5">
 					<methods>
@@ -594,26 +594,52 @@
 						<line number="41" hits="7" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.tw.biblioteca.User" filename="com/tw/biblioteca/User.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.tw.biblioteca.User" filename="com/tw/biblioteca/User.java" line-rate="1.0" branch-rate="1.0" complexity="3.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="7" hits="3" branch="false"/>
-								<line number="8" hits="3" branch="false"/>
-								<line number="9" hits="3" branch="false"/>
+								<line number="7" hits="5" branch="false"/>
+								<line number="8" hits="5" branch="false"/>
+								<line number="9" hits="5" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="2" branch="false"/>
+								<line number="13" hits="3" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="14" hits="1" branch="false"/>
+								<line number="15" hits="2" branch="false"/>
+								<line number="16" hits="2" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="17" hits="1" branch="false"/>
+								<line number="19" hits="1" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="7" hits="3" branch="false"/>
-						<line number="8" hits="3" branch="false"/>
-						<line number="9" hits="3" branch="false"/>
-						<line number="13" hits="2" branch="false"/>
+						<line number="7" hits="5" branch="false"/>
+						<line number="8" hits="5" branch="false"/>
+						<line number="9" hits="5" branch="false"/>
+						<line number="13" hits="3" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="14" hits="1" branch="false"/>
+						<line number="15" hits="2" branch="false"/>
+						<line number="16" hits="2" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="17" hits="1" branch="false"/>
+						<line number="19" hits="1" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.biblioteca.WelcomeMessage" filename="com/tw/biblioteca/WelcomeMessage.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">

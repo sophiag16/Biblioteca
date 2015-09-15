@@ -10,6 +10,12 @@ public class User {
 
     @Override
     public boolean equals(Object that) {
-        return true;
+        if(this == that)
+            return true;
+        User thatUser = (User) that;
+        if(this.libraryNumber.equals(((User) that).libraryNumber)) {
+            return true;
+        }
+        return false;
     }
 }
