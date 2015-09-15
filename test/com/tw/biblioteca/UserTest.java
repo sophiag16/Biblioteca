@@ -29,4 +29,11 @@ public class UserTest {
 
         assertNotEquals(true, user1.equals(user2));
     }
+
+    @Test
+    public void shouldNotEquateToNull() {
+        User user1 = new User("444-5555");
+
+        assertNotEquals(true, user1.equals(null));
+    }
 }

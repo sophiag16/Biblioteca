@@ -10,6 +10,9 @@ public class User {
 
     @Override
     public boolean equals(Object that) {
+        if (!(that instanceof User)) {
+            return false;
+        }
         if(this == that)
             return true;
         User thatUser = (User) that;
