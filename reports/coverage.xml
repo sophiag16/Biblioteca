@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.972027972027972" branch-rate="0.8888888888888888" lines-covered="139" lines-valid="143" branches-covered="48" branches-valid="54" complexity="2.2" version="2.1.1" timestamp="1442312936745">
+<coverage line-rate="0.972972972972973" branch-rate="0.8888888888888888" lines-covered="144" lines-valid="148" branches-covered="48" branches-valid="54" complexity="2.111111111111111" version="2.1.1" timestamp="1442317642950">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.biblioteca" line-rate="0.972027972027972" branch-rate="0.8888888888888888" complexity="2.2">
+		<package name="com.tw.biblioteca" line-rate="0.972972972972973" branch-rate="0.8888888888888888" complexity="2.111111111111111">
 			<classes>
 				<class name="com.tw.biblioteca.BibliotecaApp" filename="com/tw/biblioteca/BibliotecaApp.java" line-rate="0.6666666666666666" branch-rate="1.0" complexity="1.5">
 					<methods>
@@ -360,6 +360,30 @@
 						<line number="39" hits="1" branch="false"/>
 						<line number="41" hits="3" branch="false"/>
 						<line number="42" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.tw.biblioteca.LoginInterface" filename="com/tw/biblioteca/LoginInterface.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/util/Scanner;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="9" hits="1" branch="false"/>
+								<line number="10" hits="1" branch="false"/>
+								<line number="11" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readLibraryNumber" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="1" branch="false"/>
+								<line number="15" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="1" branch="false"/>
+						<line number="10" hits="1" branch="false"/>
+						<line number="11" hits="1" branch="false"/>
+						<line number="14" hits="1" branch="false"/>
+						<line number="15" hits="1" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.biblioteca.Menu" filename="com/tw/biblioteca/Menu.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
