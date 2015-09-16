@@ -4,6 +4,7 @@ package com.tw.biblioteca;
 public class BibliotecaApp {
     private Library library = new Library();
     private Menu menu = new Menu();
+    private Authenticator authenticator = new Authenticator();
 
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
@@ -15,7 +16,7 @@ public class BibliotecaApp {
         welcomeMessage.display();
         do {
             String choice = menu.chosenOption();
-            TaskDispatcher taskDispatcher = new TaskDispatcher(choice, library, menu);
+            TaskDispatcher taskDispatcher = new TaskDispatcher(choice, library, menu, authenticator);
             taskDispatcher.dispatch();
         }while(true);
     }

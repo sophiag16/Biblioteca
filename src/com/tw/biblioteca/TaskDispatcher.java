@@ -1,15 +1,19 @@
 //delegates execution according to the option chosen by user
 package com.tw.biblioteca;
 
+import java.util.Scanner;
+
 public class TaskDispatcher {
     private String chosenOption;
     private Library library;
     private Menu menu;
+    private Authenticator authenticator;
 
-    public TaskDispatcher(String chosenOption, Library library, Menu menu) {
+    public TaskDispatcher(String chosenOption, Library library, Menu menu, Authenticator authenticator) {
         this.chosenOption = chosenOption;
         this.library = library;
         this.menu = menu;
+        this.authenticator = authenticator;
     }
 
 
@@ -32,10 +36,14 @@ public class TaskDispatcher {
             case "6":
                 new LibraryController(library).issueMovie();
                 break;
+            case "7":
+                LoginInterface loginInterface = new LoginInterface(new Scanner(System.in));
+                authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
+                break;
             default:
                 System.out.println("Invalid option");
                 String choice = menu.chosenOption();
-                TaskDispatcher taskDispatcher = new TaskDispatcher(choice, library, menu);
+                TaskDispatcher taskDispatcher = new TaskDispatcher(choice, library, menu, authenticator);
                 taskDispatcher.dispatch();
         }
     }
