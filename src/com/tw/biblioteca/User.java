@@ -4,10 +4,20 @@ package com.tw.biblioteca;
 public class User {
     private String libraryNumber;
     private String password;
+    private String role;
+    private static final String defaultLibraryNumber = "";
+    private static final String defaultPassword = "";
 
-    public User(String libraryNumber, String password) {
+    public User() {
+        this.libraryNumber = defaultLibraryNumber;
+        this.password = defaultPassword;
+        this.role = "guest";
+    }
+
+    public User(String libraryNumber, String password, String role) {
         this.libraryNumber = libraryNumber;
         this.password = password;
+        this.role = role;
     }
 
     @Override
@@ -26,5 +36,9 @@ public class User {
 
     public boolean checkPassword(String password) {
         return this.password == password;
+    }
+
+    public String role() {
+        return role;
     }
 }

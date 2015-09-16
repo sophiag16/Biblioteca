@@ -10,20 +10,27 @@ public class AuthenticatorTest {
     public void shouldAuthenticateAUserWithValidLibraryNumberAndPassword() {
         Authenticator authenticator = new Authenticator();
 
-        assertEquals(true, authenticator.isValid("111-1111", "abcxyz"));
+        assertEquals("user", authenticator.isValid("111-1111", "abcxyz").role());
     }
 
     @Test
     public void shouldFailAuthenticatingAUserWithInvalidLibraryNumber() {
         Authenticator authenticator = new Authenticator();
 
-        assertEquals(false, authenticator.isValid("111-8755", "askldjf"));
+        assertEquals("guest", authenticator.isValid("111-8755", "askldjf").role());
     }
 
     @Test
     public void shouldFailAuthenticatingAUserWithInvalidPassword() {
         Authenticator authenticator = new Authenticator();
 
-        assertEquals(false, authenticator.isValid("111-1111", "askldjf"));
+        assertEquals("guest", authenticator.isValid("111-1111", "askldjf").role());
+    }
+
+    @Test
+    public void shouldAuthenticateLibrarian() {
+        Authenticator authenticator = new Authenticator();
+
+        assertEquals("admin", authenticator.isValid("000-0000", "secret").role());
     }
 }

@@ -7,15 +7,16 @@ public class Authenticator {
     private ArrayList<User> userArrayList = new ArrayList<User>();
 
     public Authenticator() {
-        userArrayList.add(new User("111-1111", "abcxyz"));
-        userArrayList.add(new User("222-2222", "123456"));
+        userArrayList.add(new User("111-1111", "abcxyz", "user"));
+        userArrayList.add(new User("222-2222", "123456", "user"));
+        userArrayList.add(new User("000-0000", "secret", "admin"));
     }
 
-    public boolean isValid(String libraryNumber, String password) {
-        User user = new User(libraryNumber, "");
-        if(userArrayList.contains(user)) {
-            return userArrayList.get(userArrayList.indexOf(user)).checkPassword(password);
+    public User isValid(String libraryNumber, String password) {
+        User user = new User(libraryNumber, "", "");
+        if(userArrayList.contains(user) && userArrayList.get(userArrayList.indexOf(user)).checkPassword(password)) {
+            return userArrayList.get(userArrayList.indexOf(user));
         }
-        return false;
+        return new User();
     }
 }
