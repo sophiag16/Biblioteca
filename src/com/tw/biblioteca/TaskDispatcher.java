@@ -42,9 +42,6 @@ public class TaskDispatcher {
                 break;
             default:
                 System.out.println("Invalid option");
-                String choice = menu.chosenOption();
-                TaskDispatcher taskDispatcher = new TaskDispatcher(choice, library, menu, authenticator);
-                taskDispatcher.dispatch();
         }
     }
 }
