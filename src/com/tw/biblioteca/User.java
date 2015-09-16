@@ -3,9 +3,11 @@ package com.tw.biblioteca;
 
 public class User {
     private String libraryNumber;
+    private String password;
 
-    public User(String libraryNumber) {
+    public User(String libraryNumber, String password) {
         this.libraryNumber = libraryNumber;
+        this.password = password;
     }
 
     @Override
@@ -20,5 +22,9 @@ public class User {
             return true;
         }
         return false;
+    }
+
+    public boolean checkPassword(String password) {
+        return this.password == password;
     }
 }
