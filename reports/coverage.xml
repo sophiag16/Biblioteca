@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9786096256684492" branch-rate="0.9027777777777778" lines-covered="183" lines-valid="187" branches-covered="65" branches-valid="72" complexity="2.2" version="2.1.1" timestamp="1442495053067">
+<coverage line-rate="0.9787234042553191" branch-rate="0.9027777777777778" lines-covered="184" lines-valid="188" branches-covered="65" branches-valid="72" complexity="2.2" version="2.1.1" timestamp="1442495658105">
 	<sources>
 		<source>src</source>
 	</sources>
 	<packages>
-		<package name="com.tw.biblioteca" line-rate="0.9786096256684492" branch-rate="0.9027777777777778" complexity="2.2">
+		<package name="com.tw.biblioteca" line-rate="0.9787234042553191" branch-rate="0.9027777777777778" complexity="2.2">
 			<classes>
 				<class name="com.tw.biblioteca.Authenticator" filename="com/tw/biblioteca/Authenticator.java" line-rate="1.0" branch-rate="1.0" complexity="2.5">
 					<methods>
@@ -456,13 +456,14 @@
 								<line number="18" hits="3" branch="false"/>
 								<line number="19" hits="3" branch="false"/>
 								<line number="20" hits="3" branch="false"/>
+								<line number="21" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="chosenOption" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="23" hits="3" branch="false"/>
 								<line number="24" hits="3" branch="false"/>
 								<line number="25" hits="3" branch="false"/>
+								<line number="26" hits="3" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -477,9 +478,10 @@
 						<line number="18" hits="3" branch="false"/>
 						<line number="19" hits="3" branch="false"/>
 						<line number="20" hits="3" branch="false"/>
-						<line number="23" hits="3" branch="false"/>
+						<line number="21" hits="3" branch="false"/>
 						<line number="24" hits="3" branch="false"/>
 						<line number="25" hits="3" branch="false"/>
+						<line number="26" hits="3" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.tw.biblioteca.Movie" filename="com/tw/biblioteca/Movie.java" line-rate="1.0" branch-rate="1.0" complexity="2.5">

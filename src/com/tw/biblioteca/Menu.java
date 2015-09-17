@@ -17,6 +17,7 @@ public class Menu {
         menuOptions.add("5. List Movies");
         menuOptions.add("6. Checkout Movie");
         menuOptions.add("7. Login");
+        menuOptions.add("8. Logout");
     }
 
     public String chosenOption() {
