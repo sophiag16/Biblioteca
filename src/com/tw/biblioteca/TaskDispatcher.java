@@ -6,18 +6,18 @@ import java.util.Scanner;
 public class TaskDispatcher {
     private String chosenOption;
     private Library library;
-    private Menu menu;
     private Authenticator authenticator;
+    private User currentUser;
 
-    public TaskDispatcher(String chosenOption, Library library, Menu menu, Authenticator authenticator) {
+    public TaskDispatcher(String chosenOption, Library library, Authenticator authenticator, User currentUser) {
         this.chosenOption = chosenOption;
         this.library = library;
-        this.menu = menu;
         this.authenticator = authenticator;
+        this.currentUser = currentUser;
     }
 
 
-    public void dispatch() {
+    public User dispatch() {
         switch (chosenOption) {
             case "1":
                 library.printBooks();
@@ -38,10 +38,11 @@ public class TaskDispatcher {
                 break;
             case "7":
                 LoginInterface loginInterface = new LoginInterface(new Scanner(System.in));
-                authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
+                currentUser = authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
                 break;
             default:
                 System.out.println("Invalid option");
         }
+        return currentUser;
     }
 }

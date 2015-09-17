@@ -12,7 +12,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 
 public class TaskDispatcherTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -32,7 +33,7 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldDisplayListOfBooksIfOptionOneIsChosen() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher("1", new Library(), new Menu(), new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("1", new Library(), new Authenticator(), new User());
 
         taskDispatcher.dispatch();
 
@@ -45,7 +46,7 @@ public class TaskDispatcherTest {
     @Test
     public void shouldExitIfOptionTwoIsChosen() {
         exit.expectSystemExit();
-        TaskDispatcher taskDispatcher = new TaskDispatcher("2", new Library(), new Menu(), new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("2", new Library(), new Authenticator(), new User());
         taskDispatcher.dispatch();
     }
 
@@ -55,7 +56,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("3", library, new Menu(), new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("3", library, new Authenticator(), new User("", "", ""));
 
         taskDispatcher.dispatch();
 
@@ -68,7 +69,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Menu(), new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Authenticator(), new User());
 
         taskDispatcher.dispatch();
 
@@ -80,8 +81,7 @@ public class TaskDispatcherTest {
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Menu menu = new Menu();
-        TaskDispatcher taskDispatcher = new TaskDispatcher("0", new Library(), menu, new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("0", new Library(), new Authenticator(), new User());
         taskDispatcher.dispatch();
 
         assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
@@ -90,7 +90,7 @@ public class TaskDispatcherTest {
     @Test
     public void shouldCallPrintMoviesIfOptionFiveIsChosen() {
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("5", library, new Menu(), new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("5", library, new Authenticator(), new User());
 
         taskDispatcher.dispatch();
 
@@ -103,7 +103,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("6", library, new Menu(), new Authenticator());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("6", library, new Authenticator(), new User());
 
         taskDispatcher.dispatch();
 
@@ -116,10 +116,20 @@ public class TaskDispatcherTest {
         String input = "444-5678\n" + "arfgdfg";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("7", new Library(), new Menu(), authenticator);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("7", new Library(), authenticator, new User());
 
         taskDispatcher.dispatch();
 
         Mockito.verify(authenticator, times(1)).isValid("444-5678", "arfgdfg");
+    }
+
+    @Test
+    public void shouldReturnUserIfLoginOptionIsChosen() {
+        String input = "111-1111\n" + "abcxyz";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("7", new Library(), new Authenticator(), new User());
+
+        assertEquals(true, new User("111-1111", "abcxyz", "user").equals(taskDispatcher.dispatch()));
     }
 }
