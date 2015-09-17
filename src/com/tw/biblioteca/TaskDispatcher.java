@@ -25,7 +25,12 @@ public class TaskDispatcher {
             case "2":
                 System.exit(0);
             case "3":
-                new LibraryController(library).issueBook();
+                if(currentUser.role().equals("user")) {
+                    new LibraryController(library).issueBook();
+                }
+                else {
+                    System.out.println("You need to login for this");
+                }
                 break;
             case "4":
                 new LibraryController(library).returnBook();
