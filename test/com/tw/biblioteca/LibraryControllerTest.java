@@ -34,9 +34,9 @@ public class LibraryControllerTest {
         Library library = mock(Library.class);
         LibraryController libraryController = new LibraryController(library);
 
-        libraryController.issueBook();
+        libraryController.issueBook(new User());
 
-        Mockito.verify(library, times(1)).removeBook(input);
+        Mockito.verify(library, times(1)).removeBook(input, new User());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class LibraryControllerTest {
         Library library = new Library();
         LibraryController libraryController = new LibraryController(library);
 
-        libraryController.issueBook();
+        libraryController.issueBook(new User());
 
         assertEquals("Enter the name of book to be issued\n" +
                 "Thank you! Enjoy the book\n", byteArrayOutputStream.toString());
@@ -61,7 +61,7 @@ public class LibraryControllerTest {
         Library library = new Library();
         LibraryController libraryController = new LibraryController(library);
 
-        libraryController.issueBook();
+        libraryController.issueBook(new User());
 
         assertEquals("Enter the name of book to be issued\n" +
                 "That book is not available\n", byteArrayOutputStream.toString());
@@ -75,9 +75,9 @@ public class LibraryControllerTest {
         Library library = mock(Library.class);
         LibraryController libraryController = new LibraryController(library);
 
-        libraryController.returnBook();
+        libraryController.returnBook(new User());
 
-        Mockito.verify(library, times(1)).addBook(input);
+        Mockito.verify(library, times(1)).addBook(input, new User());
     }
 
     @Test
@@ -86,10 +86,10 @@ public class LibraryControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        when(library.addBook("Harry Potter")).thenReturn(true);
+        when(library.addBook("Harry Potter", new User())).thenReturn(true);
         LibraryController libraryController = new LibraryController(library);
 
-        libraryController.returnBook();
+        libraryController.returnBook(new User());
 
         assertEquals("Enter the name of book to return\n" +
                 "Thank you for returning the book.\n", byteArrayOutputStream.toString());
@@ -101,10 +101,10 @@ public class LibraryControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        when(library.addBook("Harry")).thenReturn(false);
+        when(library.addBook("Harry", new User())).thenReturn(false);
         LibraryController libraryController = new LibraryController(library);
 
-        libraryController.returnBook();
+        libraryController.returnBook(new User());
 
         assertEquals("Enter the name of book to return\n" +
                 "That is not a valid book to return.\n", byteArrayOutputStream.toString());

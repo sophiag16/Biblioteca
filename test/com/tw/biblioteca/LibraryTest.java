@@ -37,7 +37,7 @@ public class LibraryTest {
     public void shouldNotDisplayCheckedOutBooks() {
         Library library = new Library();
 
-        library.removeBook("Harry Potter");
+        library.removeBook("Harry Potter", new User());
         library.printBooks();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
@@ -49,22 +49,22 @@ public class LibraryTest {
     public void shouldReturnTrueIfSuccessfullyIssued() {
         Library library = new Library();
 
-        assertEquals(true, library.removeBook("Harry Potter"));
+        assertEquals(true, library.removeBook("Harry Potter", new User()));
     }
 
     @Test
     public void shouldReturnFalseIfFailedToIssue() {
         Library library = new Library();
 
-        assertEquals(false, library.removeBook("Harry"));
+        assertEquals(false, library.removeBook("Harry", new User()));
     }
 
     @Test
     public void shouldAgainDisplayReturnedBooks() {
         Library library = new Library();
 
-        library.removeBook("Harry Potter");
-        library.addBook("Harry Potter");
+        library.removeBook("Harry Potter", new User());
+        library.addBook("Harry Potter", new User());
         library.printBooks();
 
         assertEquals("Name\tAuthor\tYear of Publishing\n" +
@@ -77,16 +77,16 @@ public class LibraryTest {
     public void shouldReturnTrueIfSuccessfullyReturned() {
         Library library = new Library();
 
-        library.removeBook("Harry Potter");
+        library.removeBook("Harry Potter", new User());
 
-        assertEquals(true, library.addBook("Harry Potter"));
+        assertEquals(true, library.addBook("Harry Potter", new User()));
     }
 
     @Test
     public void shouldReturnFalseIfFailedToReturn() {
         Library library = new Library();
 
-        assertEquals(false, library.addBook("Harry"));
+        assertEquals(false, library.addBook("Harry", new User()));
     }
 
     @Test
@@ -125,5 +125,13 @@ public class LibraryTest {
         Library library = new Library();
 
         assertEquals(true, library.removeMovie("Titanic"));
+    }
+
+    @Test
+    public void shouldReturnFalseIfDifferentUserTriesToReturn() {
+        Library library = new Library();
+        library.removeBook("Harry Potter", new User());
+
+        assertEquals(false, library.addBook("Harry Potter", new User("345-1234", "", "")));
     }
 }

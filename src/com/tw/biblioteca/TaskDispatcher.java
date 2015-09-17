@@ -26,7 +26,7 @@ public class TaskDispatcher {
                 System.exit(0);
             case "3":
                 if(currentUser.role().equals("user")) {
-                    new LibraryController(library).issueBook();
+                    new LibraryController(library).issueBook(currentUser);
                 }
                 else {
                     System.out.println("You need to login for this");
@@ -34,7 +34,7 @@ public class TaskDispatcher {
                 break;
             case "4":
                 if(currentUser.role().equals("user")) {
-                    new LibraryController(library).returnBook();
+                    new LibraryController(library).returnBook(currentUser);
                 }
                 else {
                     System.out.println("You need to login for this");
@@ -52,6 +52,7 @@ public class TaskDispatcher {
                 break;
             case "8":
                 currentUser = new User();
+                break;
             default:
                 System.out.println("Invalid option");
         }

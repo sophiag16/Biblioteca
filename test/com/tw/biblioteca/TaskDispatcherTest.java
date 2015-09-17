@@ -60,7 +60,7 @@ public class TaskDispatcherTest {
 
         taskDispatcher.dispatch();
 
-        Mockito.verify(library, times(1)).removeBook(input);
+        Mockito.verify(library, times(1)).removeBook(input, new User());
     }
 
     @Test
@@ -73,7 +73,7 @@ public class TaskDispatcherTest {
 
         taskDispatcher.dispatch();
 
-        Mockito.verify(library, times(1)).addBook(input);
+        Mockito.verify(library, times(1)).addBook(input, new User());
     }
 
     @Test

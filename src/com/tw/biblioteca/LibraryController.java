@@ -10,21 +10,21 @@ public class LibraryController {
         this.library = library;
     }
 
-    public void issueBook() {
+    public void issueBook(User currentUser) {
         System.out.println("Enter the name of book to be issued");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
-        if(library.removeBook(bookName))
+        if(library.removeBook(bookName, currentUser))
             System.out.println("Thank you! Enjoy the book");
         else
             System.out.println("That book is not available");
     }
 
-    public void returnBook() {
+    public void returnBook(User currentUser) {
         System.out.println("Enter the name of book to return");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
-        if(library.addBook(bookName))
+        if(library.addBook(bookName, currentUser))
             System.out.println("Thank you for returning the book.");
         else
             System.out.println("That is not a valid book to return.");

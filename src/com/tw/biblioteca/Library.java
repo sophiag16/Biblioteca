@@ -2,9 +2,11 @@
 package com.tw.biblioteca;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
     private ArrayList<Book> availableBookArrayList = new ArrayList<Book>();
+    private HashMap<Book, User> issuedBookHashMap = new HashMap<Book, User>();
     private ArrayList<Book> issuedBookArrayList = new ArrayList<Book>();
     private ArrayList<Movie> moviesArrayList = new ArrayList<Movie>();
 
@@ -30,9 +32,10 @@ public class Library {
             moviesArrayList.get(i).printInfo();
     }
 
-    public boolean removeBook(String bookName) {
+    public boolean removeBook(String bookName, User currentUser) {
         Book book = new Book(bookName, null, null);
         if(availableBookArrayList.contains(book)) {
+            issuedBookHashMap.put(availableBookArrayList.get(availableBookArrayList.indexOf(book)), currentUser);
             issuedBookArrayList.add(availableBookArrayList.remove(availableBookArrayList.indexOf(book)));
             return true;
         }
@@ -41,10 +44,11 @@ public class Library {
         }
     }
 
-    public boolean addBook(String bookName) {
+    public boolean addBook(String bookName, User currentUser) {
         Book book = new Book(bookName, null, null);
-        if(issuedBookArrayList.contains(book)) {
+        if(issuedBookHashMap.containsKey(book) && currentUser.equals(issuedBookHashMap.get(book))) {
             availableBookArrayList.add(issuedBookArrayList.remove(issuedBookArrayList.indexOf(book)));
+            issuedBookHashMap.remove(book);
             return true;
         }
         else {
