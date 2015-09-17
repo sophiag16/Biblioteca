@@ -134,4 +134,14 @@ public class LibraryTest {
 
         assertEquals(false, library.addBook("Harry Potter", new User("345-1234", "", "")));
     }
+
+    @Test
+    public void shouldPrintBookAndUserInfo() {
+        Library library = new Library();
+        library.removeBook("Harry Potter", new User("111-1111", "abcxyz", "user"));
+        library.printBookInfo();
+
+        assertEquals("Library No.\tName\tAuthor\tYear of Publishing\n" +
+                    "111-1111\tHarry Potter\tJ K Rowling\t2001\n", byteArrayOutputStream.toString());
+    }
 }

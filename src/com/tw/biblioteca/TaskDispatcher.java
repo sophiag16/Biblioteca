@@ -53,6 +53,9 @@ public class TaskDispatcher {
             case "8":
                 currentUser = new User();
                 break;
+            case "9":
+                library.printBookInfo();
+                break;
             default:
                 System.out.println("Invalid option");
         }

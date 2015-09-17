@@ -157,4 +157,14 @@ public class TaskDispatcherTest {
 
         assertEquals(true, new User().equals(taskDispatcher.dispatch()));
     }
+
+    @Test
+    public void shouldPrintBookInfoIfAdminChoosesOptionNine() {
+        Library library = mock(Library.class);
+        TaskDispatcher taskDispatcher = new TaskDispatcher("9", library, new Authenticator(), new User("", "", "admin"));
+
+        taskDispatcher.dispatch();
+
+        Mockito.verify(library, times(1)).printBookInfo();
+    }
 }

@@ -41,4 +41,8 @@ public class User {
     public String role() {
         return role;
     }
+
+    public void printLibraryNumber() {
+        System.out.print(libraryNumber);
+    }
 }

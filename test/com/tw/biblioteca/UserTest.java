@@ -1,11 +1,27 @@
 package com.tw.biblioteca;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class UserTest {
+    private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+    @Before
+    public void setStreams() {
+        System.setOut(new PrintStream(byteArrayOutputStream));
+    }
+
+    @After
+    public void CleanUpStreams() {
+        System.setOut(System.out);
+    }
 
     @Test
     public void shouldEquateToItself() {
@@ -56,5 +72,13 @@ public class UserTest {
         User user = new User("111-1111", "lj66409h", "someRole");
 
         assertEquals("someRole", user.role());
+    }
+
+    @Test
+    public void shouldPrintLibraryNumber() {
+        User user = new User("111-1111", "lj66409h", "someRole");
+        user.printLibraryNumber();
+
+        assertEquals("111-1111", byteArrayOutputStream.toString());
     }
 }

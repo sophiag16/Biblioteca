@@ -64,4 +64,14 @@ public class Library {
         }
         return false;
     }
+
+    public void printBookInfo() {
+        System.out.print("Library No.\tName\tAuthor\tYear of Publishing\n");
+        for(int i = 0; i < issuedBookHashMap.size(); i++) {
+            Book book = issuedBookArrayList.get(i);
+            issuedBookHashMap.get(book).printLibraryNumber();
+            System.out.print("\t");
+            book.printInfo();
+        }
+    }
 }
