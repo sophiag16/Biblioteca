@@ -33,7 +33,12 @@ public class TaskDispatcher {
                 }
                 break;
             case "4":
-                new LibraryController(library).returnBook();
+                if(currentUser.role().equals("user")) {
+                    new LibraryController(library).returnBook();
+                }
+                else {
+                    System.out.println("You need to login for this");
+                }
                 break;
             case "5":
                 library.printMovies();

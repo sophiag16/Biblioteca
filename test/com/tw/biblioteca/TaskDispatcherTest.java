@@ -69,7 +69,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Authenticator(), new User());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Authenticator(), new User("", "", "user"));
 
         taskDispatcher.dispatch();
 
@@ -135,7 +135,16 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldDisplayLoginRequiredMessageToGuestUserForBookIssue() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher("3", new Library(), new Authenticator(), new User("", "", ""));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("3", new Library(), new Authenticator(), new User());
+
+        taskDispatcher.dispatch();
+
+        assertEquals("You need to login for this\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldDisplayLoginRequiredMessageToGuestUserForBookReturn() {
+        TaskDispatcher taskDispatcher = new TaskDispatcher("4", new Library(), new Authenticator(), new User());
 
         taskDispatcher.dispatch();
 
