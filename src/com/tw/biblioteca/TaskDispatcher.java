@@ -50,6 +50,8 @@ public class TaskDispatcher {
                 LoginInterface loginInterface = new LoginInterface(new Scanner(System.in));
                 currentUser = authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
                 break;
+            case "8":
+                currentUser = new User();
             default:
                 System.out.println("Invalid option");
         }

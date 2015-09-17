@@ -150,4 +150,11 @@ public class TaskDispatcherTest {
 
         assertEquals("You need to login for this\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldReturnGuestUserIfLogoutOptionIsChosen() {
+        TaskDispatcher taskDispatcher = new TaskDispatcher("8", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user"));
+
+        assertEquals(true, new User().equals(taskDispatcher.dispatch()));
+    }
 }
