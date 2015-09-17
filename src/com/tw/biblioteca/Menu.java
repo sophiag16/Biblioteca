@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Menu {
     private ArrayList<String> menuOptions = new ArrayList<>();
 
-    public Menu() {
+    public Menu(User currentUser) {
         menuOptions.add("1. List Books");
         menuOptions.add("2. Quit");
         menuOptions.add("3. Checkout Book");
@@ -18,6 +18,10 @@ public class Menu {
         menuOptions.add("6. Checkout Movie");
         menuOptions.add("7. Login");
         menuOptions.add("8. Logout");
+
+        if (currentUser.role().equals("admin")) {
+            menuOptions.add("9. Show Book Details");
+        }
     }
 
     public String chosenOption() {
