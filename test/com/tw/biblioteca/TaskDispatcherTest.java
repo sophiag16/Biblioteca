@@ -167,4 +167,13 @@ public class TaskDispatcherTest {
 
         Mockito.verify(library, times(1)).printBookInfo();
     }
+
+    @Test
+    public void shouldPrintInvalidOptionIfNonAdminChoosesOptionNine() {
+        TaskDispatcher taskDispatcher = new TaskDispatcher("9", new Library(), new Authenticator(), new User());
+
+        taskDispatcher.dispatch();
+
+        assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
+    }
 }
