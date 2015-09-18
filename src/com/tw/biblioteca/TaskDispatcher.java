@@ -47,13 +47,14 @@ public class TaskDispatcher {
                 new LibraryController(library).issueMovie();
                 break;
             case "7":
-                LoginInterface loginInterface = new LoginInterface(new Scanner(System.in));
-                currentUser = authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
+                if(currentUser.role().equals("guest")) {
+                    LoginInterface loginInterface = new LoginInterface(new Scanner(System.in));
+                    currentUser = authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
+                }
+                else
+                    currentUser = new User();
                 break;
             case "8":
-                currentUser = new User();
-                break;
-            case "9":
                 if(currentUser.role().equals("admin")) {
                     library.printBookInfo();
                 }

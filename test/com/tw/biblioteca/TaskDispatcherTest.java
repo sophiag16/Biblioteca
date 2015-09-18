@@ -151,9 +151,11 @@ public class TaskDispatcherTest {
         assertEquals("You need to login for this\n", byteArrayOutputStream.toString());
     }
 
+
+
     @Test
     public void shouldReturnGuestUserIfLogoutOptionIsChosen() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher("8", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", ""));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("7", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", ""));
 
         assertEquals(true, new User().equals(taskDispatcher.dispatch()));
     }
@@ -161,7 +163,7 @@ public class TaskDispatcherTest {
     @Test
     public void shouldPrintBookInfoIfAdminChoosesOptionNine() {
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("9", library, new Authenticator(), new User("", "", "admin", "", "", ""));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("8", library, new Authenticator(), new User("", "", "admin", "", "", ""));
 
         taskDispatcher.dispatch();
 
@@ -170,7 +172,7 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldPrintInvalidOptionIfNonAdminChoosesOptionNine() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher("9", new Library(), new Authenticator(), new User());
+        TaskDispatcher taskDispatcher = new TaskDispatcher("8", new Library(), new Authenticator(), new User());
 
         taskDispatcher.dispatch();
 
@@ -179,7 +181,7 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldPrintUserInfoIfLoggedInUserChoosesOptionNine() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher("9", new Library(), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354"));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("8", new Library(), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354"));
 
         taskDispatcher.dispatch();
 

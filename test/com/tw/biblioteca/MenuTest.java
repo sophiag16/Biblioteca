@@ -37,8 +37,7 @@ public class MenuTest {
                 "4. Return Book\n" +
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
-                "7. Login\n" +
-                "8. Logout\n", byteArrayOutputStream.toString());
+                "7. Login\n", byteArrayOutputStream.toString());
     }
 
     @Test
@@ -56,9 +55,8 @@ public class MenuTest {
                 "4. Return Book\n" +
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
-                "7. Login\n" +
-                "8. Logout\n" +
-                "9. Show Book Details\n", byteArrayOutputStream.toString());
+                "7. Logout\n" +
+                "8. Show Book Details\n", byteArrayOutputStream.toString());
     }
 
     @Test
@@ -86,8 +84,7 @@ public class MenuTest {
                 "4. Return Book\n" +
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
-                "7. Login\n" +
-                "8. Logout\n" +
-                "9. Show User Details\n", byteArrayOutputStream.toString());
+                "7. Logout\n" +
+                "8. Show User Details\n", byteArrayOutputStream.toString());
     }
 }

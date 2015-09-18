@@ -16,14 +16,19 @@ public class Menu {
         menuOptions.add("4. Return Book");
         menuOptions.add("5. List Movies");
         menuOptions.add("6. Checkout Movie");
-        menuOptions.add("7. Login");
-        menuOptions.add("8. Logout");
+
+        if (currentUser.role().equals("guest")) {
+            menuOptions.add("7. Login");
+        }
+        else {
+            menuOptions.add("7. Logout");
+        }
 
         if (currentUser.role().equals("admin")) {
-            menuOptions.add("9. Show Book Details");
+            menuOptions.add("8. Show Book Details");
         }
         else if(currentUser.role().equals("user")) {
-            menuOptions.add("9. Show User Details");
+            menuOptions.add("8. Show User Details");
         }
     }
 
