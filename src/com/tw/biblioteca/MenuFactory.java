@@ -1,15 +1,17 @@
-//has a list of options and reads a choice from user
 package com.tw.biblioteca;
 
-import com.sun.deploy.util.StringUtils;
-
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Menu {
-    private ArrayList<String> menuOptions = new ArrayList<>();
+public class MenuFactory {
+    private User currentUser;
 
-    public Menu(User currentUser) {
+    public MenuFactory(User currentUser) {
+        this.currentUser = currentUser;
+    }
+
+    public ArrayList<String> createMenu() {
+        ArrayList<String> menuOptions = new ArrayList<String>();
+
         menuOptions.add("1. List Books");
         menuOptions.add("2. Quit");
         menuOptions.add("3. Checkout Book");
@@ -30,11 +32,7 @@ public class Menu {
         else if(currentUser.role().equals("user")) {
             menuOptions.add("8. Show User Details");
         }
-    }
 
-    public String chosenOption() {
-        System.out.println(StringUtils.join(menuOptions, "\n"));
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
+        return menuOptions;
     }
 }

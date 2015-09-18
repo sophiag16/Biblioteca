@@ -1,15 +1,17 @@
 package com.tw.biblioteca;
 
+import com.sun.deploy.util.StringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class MenuTest {
+public class MenuFactoryTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
     @Before
@@ -24,12 +26,10 @@ public class MenuTest {
 
     @Test
     public void shouldDisplayMenuOptionsForNonAdminUserAndGuest() {
-        Menu menu = new Menu(new User());
+        MenuFactory menuFactory = new MenuFactory(new User());
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-
-        menu.chosenOption();
 
         assertEquals("1. List Books\n" +
                 "2. Quit\n" +
@@ -37,17 +37,15 @@ public class MenuTest {
                 "4. Return Book\n" +
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
-                "7. Login\n", byteArrayOutputStream.toString());
+                "7. Login", StringUtils.join(menuFactory.createMenu(), "\n"));
     }
 
     @Test
     public void shouldDisplayMenuOptionsForAdmin() {
-        Menu menu = new Menu(new User("000-0000", "secret", "admin", "", "", ""));
+        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "admin", "", "", ""));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-
-        menu.chosenOption();
 
         assertEquals("1. List Books\n" +
                 "2. Quit\n" +
@@ -56,27 +54,15 @@ public class MenuTest {
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
                 "7. Logout\n" +
-                "8. Show Book Details\n", byteArrayOutputStream.toString());
-    }
-
-    @Test
-    public void shouldReturnMenuOptionChosen() {
-        Menu menu = new Menu(new User());
-        String input = "some option";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-
-        assertEquals(input, menu.chosenOption());
+                "8. Show Book Details", StringUtils.join(menuFactory.createMenu(), "\n"));
     }
 
     @Test
     public void shouldDisplayMenuOptionsForLoggedInUser() {
-        Menu menu = new Menu(new User("000-0000", "secret", "user", "", "", ""));
+        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "user", "", "", ""));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-
-        menu.chosenOption();
 
         assertEquals("1. List Books\n" +
                 "2. Quit\n" +
@@ -85,6 +71,6 @@ public class MenuTest {
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
                 "7. Logout\n" +
-                "8. Show User Details\n", byteArrayOutputStream.toString());
+                "8. Show User Details", StringUtils.join(menuFactory.createMenu(), "\n"));
     }
 }

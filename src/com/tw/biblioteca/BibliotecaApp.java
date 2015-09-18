@@ -3,7 +3,7 @@ package com.tw.biblioteca;
 
 public class BibliotecaApp {
     private Library library = new Library();
-    private Menu menu;
+    private MenuView menuView;
     private Authenticator authenticator = new Authenticator();
     private User currentUser = new User();
 
@@ -16,9 +16,9 @@ public class BibliotecaApp {
         WelcomeMessage welcomeMessage = new WelcomeMessage();
         welcomeMessage.display();
         do {
-            String choice = new Menu(currentUser).chosenOption();
-            TaskDispatcher taskDispatcher = new TaskDispatcher(choice, library, authenticator, currentUser);
-            currentUser = taskDispatcher.dispatch();
+            String choice = new MenuView(new MenuFactory(currentUser).createMenu()).readInput();
+            Controller controller = new Controller(choice, library, authenticator, currentUser);
+            currentUser = controller.dispatch();
         }while(true);
     }
 }
