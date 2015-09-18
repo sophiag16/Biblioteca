@@ -25,19 +25,19 @@ public class Controller {
             case "2":
                 System.exit(0);
             case "3":
-                if(currentUser.role().equals("user")) {
-                    new LibraryController(library).issueBook(currentUser);
+                if(currentUser.role().equals("guest")) {
+                System.out.println("You need to login for this");
                 }
                 else {
-                    System.out.println("You need to login for this");
+                    new LibraryController(library).issueBook(currentUser);
                 }
                 break;
             case "4":
-                if(currentUser.role().equals("user")) {
-                    new LibraryController(library).returnBook(currentUser);
+                if(currentUser.role().equals("guest")) {
+                    System.out.println("You need to login for this");
                 }
                 else {
-                    System.out.println("You need to login for this");
+                    new LibraryController(library).returnBook(currentUser);
                 }
                 break;
             case "5":
