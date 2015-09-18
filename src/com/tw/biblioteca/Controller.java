@@ -3,13 +3,13 @@ package com.tw.biblioteca;
 
 import java.util.Scanner;
 
-public class TaskDispatcher {
+public class Controller {
     private String chosenOption;
     private Library library;
     private Authenticator authenticator;
     private User currentUser;
 
-    public TaskDispatcher(String chosenOption, Library library, Authenticator authenticator, User currentUser) {
+    public Controller(String chosenOption, Library library, Authenticator authenticator, User currentUser) {
         this.chosenOption = chosenOption;
         this.library = library;
         this.authenticator = authenticator;
