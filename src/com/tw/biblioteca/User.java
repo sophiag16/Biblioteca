@@ -58,6 +58,6 @@ public class User {
     public void printInfo() {
         System.out.print("Name: " + name +
                             "\nEmail: " + email +
-                            "\nPhone: " + phone);
+                            "\nPhone: " + phone + "\n");
     }
 }

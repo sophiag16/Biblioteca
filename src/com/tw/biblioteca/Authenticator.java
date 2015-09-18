@@ -7,9 +7,9 @@ public class Authenticator {
     private ArrayList<User> userArrayList = new ArrayList<User>();
 
     public Authenticator() {
-        userArrayList.add(new User("111-1111", "abcxyz", "user", "", "", ""));
-        userArrayList.add(new User("222-2222", "123456", "user", "", "", ""));
-        userArrayList.add(new User("000-0000", "secret", "admin", "", "", ""));
+        userArrayList.add(new User("111-1111", "abcxyz", "user", "Sophia", "sophia@gmail.com", "8764656"));
+        userArrayList.add(new User("222-2222", "123456", "user", "Keerthana", "keerthas@gmail.com", "457976986"));
+        userArrayList.add(new User("000-0000", "secret", "admin", "Jhalaa", "jhalach@gmail.com", "99965354"));
     }
 
     public User isValid(String libraryNumber, String password) {

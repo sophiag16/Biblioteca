@@ -89,6 +89,6 @@ public class UserTest {
 
         assertEquals("Name: " + "Sophia" +
                 "\nEmail: " + "sophia@gmail.com" +
-                "\nPhone: " + "9874375476354", byteArrayOutputStream.toString());
+                "\nPhone: " + "9874375476354\n", byteArrayOutputStream.toString());
     }
 }
