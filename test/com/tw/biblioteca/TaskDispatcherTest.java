@@ -56,7 +56,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("3", library, new Authenticator(), new User("", "", "user"));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("3", library, new Authenticator(), new User("", "", "user", "", "", ""));
 
         taskDispatcher.dispatch();
 
@@ -69,7 +69,7 @@ public class TaskDispatcherTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Authenticator(), new User("", "", "user"));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("4", library, new Authenticator(), new User("", "", "user", "", "", ""));
 
         taskDispatcher.dispatch();
 
@@ -130,7 +130,7 @@ public class TaskDispatcherTest {
         System.setIn(inContent);
         TaskDispatcher taskDispatcher = new TaskDispatcher("7", new Library(), new Authenticator(), new User());
 
-        assertEquals(true, new User("111-1111", "abcxyz", "user").equals(taskDispatcher.dispatch()));
+        assertEquals(true, new User("111-1111", "abcxyz", "user", "", "", "").equals(taskDispatcher.dispatch()));
     }
 
     @Test
@@ -153,7 +153,7 @@ public class TaskDispatcherTest {
 
     @Test
     public void shouldReturnGuestUserIfLogoutOptionIsChosen() {
-        TaskDispatcher taskDispatcher = new TaskDispatcher("8", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user"));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("8", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", ""));
 
         assertEquals(true, new User().equals(taskDispatcher.dispatch()));
     }
@@ -161,7 +161,7 @@ public class TaskDispatcherTest {
     @Test
     public void shouldPrintBookInfoIfAdminChoosesOptionNine() {
         Library library = mock(Library.class);
-        TaskDispatcher taskDispatcher = new TaskDispatcher("9", library, new Authenticator(), new User("", "", "admin"));
+        TaskDispatcher taskDispatcher = new TaskDispatcher("9", library, new Authenticator(), new User("", "", "admin", "", "", ""));
 
         taskDispatcher.dispatch();
 
@@ -176,4 +176,6 @@ public class TaskDispatcherTest {
 
         assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
     }
+
+
 }

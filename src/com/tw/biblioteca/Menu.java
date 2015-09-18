@@ -22,6 +22,9 @@ public class Menu {
         if (currentUser.role().equals("admin")) {
             menuOptions.add("9. Show Book Details");
         }
+        else if(currentUser.role().equals("user")) {
+            menuOptions.add("9. Show User Details");
+        }
     }
 
     public String chosenOption() {

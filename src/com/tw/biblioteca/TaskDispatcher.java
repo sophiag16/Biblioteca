@@ -57,8 +57,7 @@ public class TaskDispatcher {
                 if(currentUser.role().equals("admin")) {
                     library.printBookInfo();
                 }
-                else
-                {
+                else {
                     System.out.println("Invalid option");
                 }
                 break;

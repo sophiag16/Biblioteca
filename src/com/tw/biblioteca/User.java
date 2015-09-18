@@ -5,6 +5,9 @@ public class User {
     private String libraryNumber;
     private String password;
     private String role;
+    private String name;
+    private String email;
+    private String phone;
     private static final String defaultLibraryNumber = "";
     private static final String defaultPassword = "";
 
@@ -12,12 +15,18 @@ public class User {
         this.libraryNumber = defaultLibraryNumber;
         this.password = defaultPassword;
         this.role = "guest";
+        this.name = "";
+        this.email = "";
+        this.phone = "";
     }
 
-    public User(String libraryNumber, String password, String role) {
+    public User(String libraryNumber, String password, String role, String name, String email, String phone) {
         this.libraryNumber = libraryNumber;
         this.password = password;
         this.role = role;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
     }
 
     @Override

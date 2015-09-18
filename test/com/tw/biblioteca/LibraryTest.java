@@ -132,13 +132,13 @@ public class LibraryTest {
         Library library = new Library();
         library.removeBook("Harry Potter", new User());
 
-        assertEquals(false, library.addBook("Harry Potter", new User("345-1234", "", "")));
+        assertEquals(false, library.addBook("Harry Potter", new User("345-1234", "", "", "", "", "")));
     }
 
     @Test
     public void shouldPrintBookAndUserInfo() {
         Library library = new Library();
-        library.removeBook("Harry Potter", new User("111-1111", "abcxyz", "user"));
+        library.removeBook("Harry Potter", new User("111-1111", "abcxyz", "user", "", "", ""));
         library.printBookInfo();
 
         assertEquals("Library No.\tName\tAuthor\tYear of Publishing\n" +
