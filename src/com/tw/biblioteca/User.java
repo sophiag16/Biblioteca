@@ -54,4 +54,10 @@ public class User {
     public void printLibraryNumber() {
         System.out.print(libraryNumber);
     }
+
+    public void printInfo() {
+        System.out.print("Name: " + name +
+                            "\nEmail: " + email +
+                            "\nPhone: " + phone);
+    }
 }

@@ -81,4 +81,14 @@ public class UserTest {
 
         assertEquals("111-1111", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldPrintUserInfo() {
+        User user = new User("111-1111", "lj66409h", "someRole", "Sophia", "sophia@gmail.com", "9874375476354");
+        user.printInfo();
+
+        assertEquals("Name: " + "Sophia" +
+                "\nEmail: " + "sophia@gmail.com" +
+                "\nPhone: " + "9874375476354", byteArrayOutputStream.toString());
+    }
 }

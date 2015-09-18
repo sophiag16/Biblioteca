@@ -177,5 +177,14 @@ public class TaskDispatcherTest {
         assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
     }
 
+    @Test
+    public void shouldPrintUserInfoIfLoggedInUserChoosesOptionNine() {
+        TaskDispatcher taskDispatcher = new TaskDispatcher("9", new Library(), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354"));
 
+        taskDispatcher.dispatch();
+
+        assertEquals("Name: " + "Sophia" +
+                "\nEmail: " + "sophia@gmail.com" +
+                "\nPhone: " + "9874375476354", byteArrayOutputStream.toString());
+    }
 }
