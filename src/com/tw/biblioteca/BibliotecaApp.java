@@ -1,11 +1,14 @@
 //The library management application that delegates the things in the specifications
 package com.tw.biblioteca;
 
+import java.io.PrintStream;
+
 public class BibliotecaApp {
     private Library library = new Library();
     private MenuView menuView;
     private Authenticator authenticator = new Authenticator();
     private User currentUser = new User();
+    Display display = new Display(new PrintStream(System.out));
 
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
@@ -13,7 +16,7 @@ public class BibliotecaApp {
     }
 
     public void start() {
-        WelcomeMessage welcomeMessage = new WelcomeMessage();
+        WelcomeMessage welcomeMessage = new WelcomeMessage(display);
         welcomeMessage.display();
         do {
             String choice = new MenuView(new MenuFactory(currentUser).createMenu()).readInput();

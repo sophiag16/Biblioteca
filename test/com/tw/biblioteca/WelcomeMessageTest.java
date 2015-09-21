@@ -24,7 +24,7 @@ public class WelcomeMessageTest {
 
     @Test
     public void shouldPrintTheWelcomeMessage() {
-        WelcomeMessage welcomeMessage = new WelcomeMessage();
+        WelcomeMessage welcomeMessage = new WelcomeMessage(new Display(System.out));
         welcomeMessage.display();
         assertEquals("Welcome to Biblioteca\n", byteArrayOutputStream.toString());
     }
