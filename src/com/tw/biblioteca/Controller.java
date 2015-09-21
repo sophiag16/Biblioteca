@@ -8,12 +8,14 @@ public class Controller {
     private Library library;
     private Authenticator authenticator;
     private User currentUser;
+    private Display display;
 
-    public Controller(String chosenOption, Library library, Authenticator authenticator, User currentUser) {
+    public Controller(String chosenOption, Library library, Authenticator authenticator, User currentUser, Display display) {
         this.chosenOption = chosenOption;
         this.library = library;
         this.authenticator = authenticator;
         this.currentUser = currentUser;
+        this.display = display;
     }
 
 
@@ -26,7 +28,7 @@ public class Controller {
                 System.exit(0);
             case "3":
                 if(currentUser.role().equals("guest")) {
-                printString("You need to login for this\n");
+                display.printString("You need to login for this\n");
                 }
                 else {
                     new LibraryController(library).issueBook(currentUser);
@@ -34,7 +36,7 @@ public class Controller {
                 break;
             case "4":
                 if(currentUser.role().equals("guest")) {
-                    printString("You need to login for this\n");
+                    display.printString("You need to login for this\n");
                 }
                 else {
                     new LibraryController(library).returnBook(currentUser);
@@ -63,17 +65,12 @@ public class Controller {
                     currentUser.printInfo();
                 }
                 else {
-                    printString("Invalid option\n");
+                    display.printString("Invalid option\n");
                 }
                 break;
             default:
-                printString("Invalid option\n");
+                display.printString("Invalid option\n");
         }
         return currentUser;
     }
-
-    private void printString(String stringToPrint) {
-        System.out.print(stringToPrint);
-    }
-
 }

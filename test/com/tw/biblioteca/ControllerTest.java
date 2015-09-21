@@ -33,7 +33,7 @@ public class ControllerTest {
 
     @Test
     public void shouldDisplayListOfBooksIfOptionOneIsChosen() {
-        Controller controller = new Controller("1", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("1", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -46,7 +46,7 @@ public class ControllerTest {
     @Test
     public void shouldExitIfOptionTwoIsChosen() {
         exit.expectSystemExit();
-        Controller controller = new Controller("2", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("2", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
         controller.dispatch();
     }
 
@@ -56,7 +56,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Controller controller = new Controller("3", library, new Authenticator(), new User("", "", "user", "", "", ""));
+        Controller controller = new Controller("3", library, new Authenticator(), new User("", "", "user", "", "", ""), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -69,7 +69,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Controller controller = new Controller("4", library, new Authenticator(), new User("", "", "user", "", "", ""));
+        Controller controller = new Controller("4", library, new Authenticator(), new User("", "", "user", "", "", ""), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -81,7 +81,7 @@ public class ControllerTest {
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Controller controller = new Controller("0", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("0", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
         controller.dispatch();
 
         assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
@@ -90,7 +90,7 @@ public class ControllerTest {
     @Test
     public void shouldCallPrintMoviesIfOptionFiveIsChosen() {
         Library library = mock(Library.class);
-        Controller controller = new Controller("5", library, new Authenticator(), new User());
+        Controller controller = new Controller("5", library, new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -103,7 +103,7 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Controller controller = new Controller("6", library, new Authenticator(), new User());
+        Controller controller = new Controller("6", library, new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -116,7 +116,7 @@ public class ControllerTest {
         String input = "444-5678\n" + "arfgdfg";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Controller controller = new Controller("7", new Library(), authenticator, new User());
+        Controller controller = new Controller("7", new Library(), authenticator, new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -128,14 +128,14 @@ public class ControllerTest {
         String input = "111-1111\n" + "abcxyz";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Controller controller = new Controller("7", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("7", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         assertEquals(true, new User("111-1111", "abcxyz", "user", "", "", "").equals(controller.dispatch()));
     }
 
     @Test
     public void shouldDisplayLoginRequiredMessageToGuestUserForBookIssue() {
-        Controller controller = new Controller("3", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("3", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -144,7 +144,7 @@ public class ControllerTest {
 
     @Test
     public void shouldDisplayLoginRequiredMessageToGuestUserForBookReturn() {
-        Controller controller = new Controller("4", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("4", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -155,7 +155,7 @@ public class ControllerTest {
 
     @Test
     public void shouldReturnGuestUserIfLogoutOptionIsChosen() {
-        Controller controller = new Controller("7", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", ""));
+        Controller controller = new Controller("7", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", ""), new Display(new PrintStream(System.out)));
 
         assertEquals(true, new User().equals(controller.dispatch()));
     }
@@ -163,7 +163,7 @@ public class ControllerTest {
     @Test
     public void shouldPrintBookInfoIfAdminChoosesOptionNine() {
         Library library = mock(Library.class);
-        Controller controller = new Controller("8", library, new Authenticator(), new User("", "", "admin", "", "", ""));
+        Controller controller = new Controller("8", library, new Authenticator(), new User("", "", "admin", "", "", ""), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -172,7 +172,7 @@ public class ControllerTest {
 
     @Test
     public void shouldPrintInvalidOptionIfNonAdminChoosesOptionNine() {
-        Controller controller = new Controller("8", new Library(), new Authenticator(), new User());
+        Controller controller = new Controller("8", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -181,7 +181,7 @@ public class ControllerTest {
 
     @Test
     public void shouldPrintUserInfoIfLoggedInUserChoosesOptionNine() {
-        Controller controller = new Controller("8", new Library(), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354"));
+        Controller controller = new Controller("8", new Library(), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354"), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
