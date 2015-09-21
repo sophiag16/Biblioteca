@@ -166,6 +166,16 @@ public class ControllerTest {
     }
 
     @Test
+    public void shouldPrintBookInfoIfNonAdminChoosesOptionNine() {
+        Display display = mock(Display.class);
+        Controller controller = new Controller("9", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), display);
+
+        controller.dispatch();
+
+        verify(display, times(1)).printString("Invalid option\n");
+    }
+
+    @Test
     public void shouldPrintInvalidOptionIfGuestChoosesOptionEight() {
         Display display = mock(Display.class);
         Controller controller = new Controller("8", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), display);
