@@ -40,7 +40,7 @@ public class ControllerTest {
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001") +
                 String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
-                String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
     }
 
     @Test

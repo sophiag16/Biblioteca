@@ -30,7 +30,7 @@ public class LibraryTest {
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001") +
                 String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
-                String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -42,7 +42,7 @@ public class LibraryTest {
 
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
-                String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -70,7 +70,7 @@ public class LibraryTest {
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
                 String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988") +
-                String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n\n", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -98,7 +98,7 @@ public class LibraryTest {
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating") +
                 String.format("%-34s %-34s %-34s %-34s\n", "Titanic", "James Cameron", "1997", "8") +
                 String.format("%-34s %-34s %-34s %-34s\n", "Pursuit Of Happyness", "Gabriele Muccino", "2006", "8") +
-                String.format("%-34s %-34s %-34s %-34s\n", "Inception", "Christopher Nolan", "2010", "8"), byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s %-34s\n\n", "Inception", "Christopher Nolan", "2010", "8"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -110,7 +110,7 @@ public class LibraryTest {
 
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating") +
                 String.format("%-34s %-34s %-34s %-34s\n", "Pursuit Of Happyness", "Gabriele Muccino", "2006", "8") +
-                String.format("%-34s %-34s %-34s %-34s\n", "Inception", "Christopher Nolan", "2010", "8"), byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s %-34s\n\n", "Inception", "Christopher Nolan", "2010", "8"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -142,6 +142,6 @@ public class LibraryTest {
         library.printBookInfo();
 
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing") +
-                    String.format("%-34s %-34s %-34s %-34s\n", "111-1111", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
+                    String.format("%-34s %-34s %-34s %-34s\n\n", "111-1111", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
     }
 }

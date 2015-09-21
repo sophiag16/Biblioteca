@@ -24,8 +24,8 @@ public class Book {
         if(this == that) {
             return true;
         }
-        Book thatLine = (Book) that;
-        if(this.name.equals(thatLine.name)) {
+        Book thatBook = (Book) that;
+        if(this.name.equals(thatBook.name)) {
             return true;
         }
         return false;
