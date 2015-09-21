@@ -21,17 +21,17 @@ public class Library {
     }
 
     public void printBooks() {
-        System.out.print(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing"));
+        printString(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing"));
         for(int i = 0; i < availableBookArrayList.size(); i++)
             availableBookArrayList.get(i).printInfo();
-        System.out.println();
+        printString("\n");
     }
 
     public void printMovies() {
-        System.out.print(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating"));
+        printString(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating"));
         for(int i = 0; i < moviesArrayList.size(); i++)
             moviesArrayList.get(i).printInfo();
-        System.out.println();
+        printString("\n");
     }
 
     public boolean removeBook(String bookName, User currentUser) {
@@ -68,12 +68,17 @@ public class Library {
     }
 
     public void printBookInfo() {
-        System.out.print(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing"));
+        printString(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing"));
         for(int i = 0; i < issuedBookHashMap.size(); i++) {
             Book book = issuedBookArrayList.get(i);
             issuedBookHashMap.get(book).printLibraryNumber();
             book.printInfo();
         }
-        System.out.println("");
+        printString("\n");
     }
+
+    private void printString(String stringToPrint) {
+        System.out.print(stringToPrint);
+    }
+
 }

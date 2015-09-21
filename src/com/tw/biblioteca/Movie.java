@@ -15,7 +15,7 @@ public class Movie {
     }
 
     public void printInfo() {
-        System.out.print(String.format("%-34s %-34s %-34s %-34s\n", name, director, year, rating));
+        printString(String.format("%-34s %-34s %-34s %-34s\n", name, director, year, rating));
     }
 
     @Override
@@ -37,4 +37,9 @@ public class Movie {
     public int hashCode() {
         return name.hashCode();
     }
+
+    private void printString(String stringToPrint) {
+        System.out.print(stringToPrint);
+    }
+
 }

@@ -14,8 +14,13 @@ public class MenuView {
     }
 
     public String readInput() {
-        System.out.println(StringUtils.join(menuOptions, "\n"));
+        printString(StringUtils.join(menuOptions, "\n") + "\n");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
+
+    private void printString(String stringToPrint) {
+        System.out.print(stringToPrint);
+    }
+
 }

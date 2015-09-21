@@ -52,12 +52,17 @@ public class User {
     }
 
     public void printLibraryNumber() {
-        System.out.print(String.format("%-34s ", libraryNumber, ""));
+        printString(String.format("%-34s ", libraryNumber, ""));
     }
 
     public void printInfo() {
-        System.out.print("Name: " + name +
+        printString("Name: " + name +
                 "\nEmail: " + email +
                 "\nPhone: " + phone + "\n");
     }
+
+    private void printString(String stringToPrint) {
+        System.out.print(stringToPrint);
+    }
+
 }

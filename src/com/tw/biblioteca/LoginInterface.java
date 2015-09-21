@@ -11,12 +11,17 @@ public class LoginInterface {
     }
 
     public String libraryNumber() {
-        System.out.println("Enter your library number: ");
+        printString("Enter your library number: \n");
         return scanner.nextLine();
     }
 
     public String password() {
-        System.out.println("Enter your password: ");
+        printString("Enter your password: \n");
         return scanner.nextLine();
     }
+
+    private void printString(String stringToPrint) {
+        System.out.println(stringToPrint);
+    }
+
 }

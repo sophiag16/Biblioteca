@@ -26,7 +26,7 @@ public class Controller {
                 System.exit(0);
             case "3":
                 if(currentUser.role().equals("guest")) {
-                System.out.println("You need to login for this");
+                printString("You need to login for this\n");
                 }
                 else {
                     new LibraryController(library).issueBook(currentUser);
@@ -34,7 +34,7 @@ public class Controller {
                 break;
             case "4":
                 if(currentUser.role().equals("guest")) {
-                    System.out.println("You need to login for this");
+                    printString("You need to login for this\n");
                 }
                 else {
                     new LibraryController(library).returnBook(currentUser);
@@ -63,12 +63,17 @@ public class Controller {
                     currentUser.printInfo();
                 }
                 else {
-                    System.out.println("Invalid option");
+                    printString("Invalid option\n");
                 }
                 break;
             default:
-                System.out.println("Invalid option");
+                printString("Invalid option\n");
         }
         return currentUser;
     }
+
+    private void printString(String stringToPrint) {
+        System.out.print(stringToPrint);
+    }
+
 }

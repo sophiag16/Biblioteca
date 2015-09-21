@@ -11,33 +11,38 @@ public class LibraryController {
     }
 
     public void issueBook(User currentUser) {
-        System.out.println("Enter the name of book to be issued");
+        printString("Enter the name of book to be issued\n");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
         if(library.removeBook(bookName, currentUser))
-            System.out.println("Thank you! Enjoy the book");
+            printString("Thank you! Enjoy the book\n");
         else
-            System.out.println("That book is not available");
+            printString("That book is not available\n");
     }
 
     public void returnBook(User currentUser) {
-        System.out.println("Enter the name of book to return");
+        printString("Enter the name of book to return\n");
         Scanner scanner = new Scanner(System.in);
         String bookName = scanner.nextLine();
         if(library.addBook(bookName, currentUser))
-            System.out.println("Thank you for returning the book.");
+            printString("Thank you for returning the book.\n");
         else
-            System.out.println("That is not a valid book to return.");
+            printString("That is not a valid book to return.\n");
 
     }
 
     public void issueMovie() {
-        System.out.println("Enter the name of movie to be issued");
+        printString("Enter the name of movie to be issued\n");
         Scanner scanner = new Scanner(System.in);
         String movieName = scanner.nextLine();
         if(library.removeMovie(movieName))
-            System.out.println("Thank you! Enjoy the movie");
+            printString("Thank you! Enjoy the movie\n");
         else
-            System.out.println("That movie is not available");
+            printString("That movie is not available\n");
     }
+
+    private void printString(String stringToPrint) {
+        System.out.print(stringToPrint);
+    }
+
 }
