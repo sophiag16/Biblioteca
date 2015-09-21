@@ -158,7 +158,7 @@ public class ControllerTest {
     @Test
     public void shouldPrintBookInfoIfAdminChoosesOptionNine() {
         Library library = mock(Library.class);
-        Controller controller = new Controller("8", library, new Authenticator(), new User("", "", "admin", "", "", "", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("9", library, new Authenticator(), new User("", "", "admin", "", "", "", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -166,7 +166,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void shouldPrintInvalidOptionIfNonAdminChoosesOptionNine() {
+    public void shouldPrintInvalidOptionIfGuestChoosesOptionEight() {
         Display display = mock(Display.class);
         Controller controller = new Controller("8", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), display);
 

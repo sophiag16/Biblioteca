@@ -58,12 +58,16 @@ public class Controller {
                     currentUser = new User();
                 break;
             case "8":
+                if(!currentUser.role().equals("guest")) {
+                    currentUser.printInfo();
+                }
+                else {
+                    display.printString("Invalid option\n");
+                }
+                break;
+            case "9":
                 if(currentUser.role().equals("admin")) {
                     library.printBookInfo();
-                }
-                else if(currentUser.role().equals("user"))
-                {
-                    currentUser.printInfo();
                 }
                 else {
                     display.printString("Invalid option\n");

@@ -54,7 +54,8 @@ public class MenuSetupTest {
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
                 "7. Logout\n" +
-                "8. Show Book Details", StringUtils.join(menuSetup.createMenu(), "\n"));
+                "8. Show User Details\n" +
+                "9. Show Book Details", StringUtils.join(menuSetup.createMenu(), "\n"));
     }
 
     @Test

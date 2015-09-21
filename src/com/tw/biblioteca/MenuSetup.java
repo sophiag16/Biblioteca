@@ -26,11 +26,12 @@ public class MenuSetup {
             menuOptions.add("7. Logout");
         }
 
-        if (currentUser.role().equals("admin")) {
-            menuOptions.add("8. Show Book Details");
-        }
-        else if(currentUser.role().equals("user")) {
+        if (!currentUser.role().equals("guest")) {
             menuOptions.add("8. Show User Details");
+        }
+
+        if (currentUser.role().equals("admin")) {
+            menuOptions.add("9. Show Book Details");
         }
 
         return menuOptions;
