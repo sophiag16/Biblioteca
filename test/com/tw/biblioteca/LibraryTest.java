@@ -27,7 +27,7 @@ public class LibraryTest {
 
         library.printBooks();
 
-        assertEquals("Name\tAuthor\tYear of Publishing\n" +
+        assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 "Harry Potter\tJ K Rowling\t2001\n" +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
                 "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
@@ -40,7 +40,7 @@ public class LibraryTest {
         library.removeBook("Harry Potter", new User());
         library.printBooks();
 
-        assertEquals("Name\tAuthor\tYear of Publishing\n" +
+        assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
                 "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
     }
@@ -67,7 +67,7 @@ public class LibraryTest {
         library.addBook("Harry Potter", new User());
         library.printBooks();
 
-        assertEquals("Name\tAuthor\tYear of Publishing\n" +
+        assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
                 "To Kill A Mockingbird\tHarper Lee\t1970\n" +
                 "A Brief History Of Time\tStephen Hawking\t1988\n" +
                 "Harry Potter\tJ K Rowling\t2001\n", byteArrayOutputStream.toString());
@@ -95,7 +95,7 @@ public class LibraryTest {
 
         library.printMovies();
 
-        assertEquals("Name\tYear\tDirector\tRating\n" +
+        assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating") +
                 "Titanic\tJames Cameron\t1997\t8\n" +
                 "Pursuit Of Happyness\tGabriele Muccino\t2006\t8\n" +
                 "Inception\tChristopher Nolan\t2010\t8\n", byteArrayOutputStream.toString());
@@ -108,7 +108,7 @@ public class LibraryTest {
         library.removeMovie("Titanic");
         library.printMovies();
 
-        assertEquals("Name\tYear\tDirector\tRating\n" +
+        assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating") +
                 "Pursuit Of Happyness\tGabriele Muccino\t2006\t8\n" +
                 "Inception\tChristopher Nolan\t2010\t8\n", byteArrayOutputStream.toString());
     }
@@ -141,7 +141,7 @@ public class LibraryTest {
         library.removeBook("Harry Potter", new User("111-1111", "abcxyz", "user", "", "", ""));
         library.printBookInfo();
 
-        assertEquals("Library No.\tName\tAuthor\tYear of Publishing\n" +
+        assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing") +
                     "111-1111\tHarry Potter\tJ K Rowling\t2001\n", byteArrayOutputStream.toString());
     }
 }

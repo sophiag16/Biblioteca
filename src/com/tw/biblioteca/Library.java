@@ -21,13 +21,13 @@ public class Library {
     }
 
     public void printBooks() {
-        System.out.print("Name\tAuthor\tYear of Publishing\n");
+        System.out.print(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing"));
         for(int i = 0; i < availableBookArrayList.size(); i++)
             availableBookArrayList.get(i).printInfo();
     }
 
     public void printMovies() {
-        System.out.print("Name\tYear\tDirector\tRating\n");
+        System.out.print(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating"));
         for(int i = 0; i < moviesArrayList.size(); i++)
             moviesArrayList.get(i).printInfo();
     }
@@ -66,7 +66,7 @@ public class Library {
     }
 
     public void printBookInfo() {
-        System.out.print("Library No.\tName\tAuthor\tYear of Publishing\n");
+        System.out.print(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing"));
         for(int i = 0; i < issuedBookHashMap.size(); i++) {
             Book book = issuedBookArrayList.get(i);
             issuedBookHashMap.get(book).printLibraryNumber();
