@@ -24,12 +24,14 @@ public class Library {
         System.out.print(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing"));
         for(int i = 0; i < availableBookArrayList.size(); i++)
             availableBookArrayList.get(i).printInfo();
+        System.out.println();
     }
 
     public void printMovies() {
         System.out.print(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating"));
         for(int i = 0; i < moviesArrayList.size(); i++)
             moviesArrayList.get(i).printInfo();
+        System.out.println();
     }
 
     public boolean removeBook(String bookName, User currentUser) {
@@ -72,5 +74,6 @@ public class Library {
             issuedBookHashMap.get(book).printLibraryNumber();
             book.printInfo();
         }
+        System.out.println("");
     }
 }
