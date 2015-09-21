@@ -79,7 +79,7 @@ public class UserTest {
         User user = new User("111-1111", "lj66409h", "someRole", "", "", "");
         user.printLibraryNumber();
 
-        assertEquals("111-1111", byteArrayOutputStream.toString());
+        assertEquals(String.format("%-34s ", "111-1111"), byteArrayOutputStream.toString());
     }
 
     @Test

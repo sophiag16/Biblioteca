@@ -28,7 +28,7 @@ public class BookTest {
 
         book.printInfo();
 
-        assertEquals("Harry Potter" + "\t" + "J K Rowling" + "\t" + "2001\n", byteArrayOutputStream.toString());
+        assertEquals(String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
     }
 
     @Test

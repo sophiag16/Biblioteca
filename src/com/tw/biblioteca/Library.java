@@ -70,7 +70,6 @@ public class Library {
         for(int i = 0; i < issuedBookHashMap.size(); i++) {
             Book book = issuedBookArrayList.get(i);
             issuedBookHashMap.get(book).printLibraryNumber();
-            System.out.print("\t");
             book.printInfo();
         }
     }

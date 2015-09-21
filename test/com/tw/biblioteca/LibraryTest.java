@@ -28,9 +28,9 @@ public class LibraryTest {
         library.printBooks();
 
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
-                "Harry Potter\tJ K Rowling\t2001\n" +
-                "To Kill A Mockingbird\tHarper Lee\t1970\n" +
-                "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001") +
+                String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
+                String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -41,8 +41,8 @@ public class LibraryTest {
         library.printBooks();
 
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
-                "To Kill A Mockingbird\tHarper Lee\t1970\n" +
-                "A Brief History Of Time\tStephen Hawking\t1988\n", byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
+                String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -68,9 +68,9 @@ public class LibraryTest {
         library.printBooks();
 
         assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
-                "To Kill A Mockingbird\tHarper Lee\t1970\n" +
-                "A Brief History Of Time\tStephen Hawking\t1988\n" +
-                "Harry Potter\tJ K Rowling\t2001\n", byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
+                String.format("%-34s %-34s %-34s\n", "A Brief History Of Time", "Stephen Hawking", "1988") +
+                String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -142,6 +142,6 @@ public class LibraryTest {
         library.printBookInfo();
 
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing") +
-                    "111-1111\tHarry Potter\tJ K Rowling\t2001\n", byteArrayOutputStream.toString());
+                    String.format("%-34s %-34s %-34s %-34s\n", "111-1111", "Harry Potter", "J K Rowling", "2001"), byteArrayOutputStream.toString());
     }
 }

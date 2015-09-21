@@ -13,7 +13,7 @@ public class Book {
     }
 
     public void printInfo() {
-        System.out.println(name + "\t" + author + "\t" + yearOfPublication);
+        System.out.println(String.format("%-34s %-34s %-34s", name, author, yearOfPublication));
     }
 
     @Override
