@@ -2,10 +2,10 @@ package com.tw.biblioteca;
 
 import java.util.ArrayList;
 
-public class MenuFactory {
+public class MenuSetup {
     private User currentUser;
 
-    public MenuFactory(User currentUser) {
+    public MenuSetup(User currentUser) {
         this.currentUser = currentUser;
     }
 

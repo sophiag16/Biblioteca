@@ -11,7 +11,7 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class MenuFactoryTest {
+public class MenuSetupTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
     @Before
@@ -26,7 +26,7 @@ public class MenuFactoryTest {
 
     @Test
     public void shouldDisplayMenuOptionsForNonAdminUserAndGuest() {
-        MenuFactory menuFactory = new MenuFactory(new User());
+        MenuSetup menuSetup = new MenuSetup(new User());
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -37,12 +37,12 @@ public class MenuFactoryTest {
                 "4. Return Book\n" +
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
-                "7. Login", StringUtils.join(menuFactory.createMenu(), "\n"));
+                "7. Login", StringUtils.join(menuSetup.createMenu(), "\n"));
     }
 
     @Test
     public void shouldDisplayMenuOptionsForAdmin() {
-        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "admin", "", "", "", new Display(new PrintStream(System.out))));
+        MenuSetup menuSetup = new MenuSetup(new User("000-0000", "secret", "admin", "", "", "", new Display(new PrintStream(System.out))));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -54,12 +54,12 @@ public class MenuFactoryTest {
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
                 "7. Logout\n" +
-                "8. Show Book Details", StringUtils.join(menuFactory.createMenu(), "\n"));
+                "8. Show Book Details", StringUtils.join(menuSetup.createMenu(), "\n"));
     }
 
     @Test
     public void shouldDisplayMenuOptionsForLoggedInUser() {
-        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "user", "", "", "", new Display(new PrintStream(System.out))));
+        MenuSetup menuSetup = new MenuSetup(new User("000-0000", "secret", "user", "", "", "", new Display(new PrintStream(System.out))));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -71,6 +71,6 @@ public class MenuFactoryTest {
                 "5. List Movies\n" +
                 "6. Checkout Movie\n" +
                 "7. Logout\n" +
-                "8. Show User Details", StringUtils.join(menuFactory.createMenu(), "\n"));
+                "8. Show User Details", StringUtils.join(menuSetup.createMenu(), "\n"));
     }
 }

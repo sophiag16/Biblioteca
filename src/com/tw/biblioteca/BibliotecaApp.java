@@ -19,7 +19,7 @@ public class BibliotecaApp {
         WelcomeMessage welcomeMessage = new WelcomeMessage(display);
         welcomeMessage.display();
         do {
-            String choice = new MenuView(new MenuFactory(currentUser).createMenu(), new Display(new PrintStream(System.out))).readInput();
+            String choice = new MenuView(new MenuSetup(currentUser).createMenu(), new Display(new PrintStream(System.out))).readInput();
             Controller controller = new Controller(choice, library, authenticator, currentUser, display);
             currentUser = controller.dispatch();
         }while(true);
