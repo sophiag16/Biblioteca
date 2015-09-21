@@ -28,7 +28,7 @@ public class MovieTest {
 
         movie.printInfo();
 
-        assertEquals("Titanic\tJames Cameron\t1997\t8\n", byteArrayOutputStream.toString());
+        assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Titanic", "James Cameron", "1997", "8"), byteArrayOutputStream.toString());
     }
 
     @Test

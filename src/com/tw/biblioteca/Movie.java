@@ -15,7 +15,7 @@ public class Movie {
     }
 
     public void printInfo() {
-        System.out.println(name + "\t" + director + "\t" + year + "\t" + rating);
+        System.out.print(String.format("%-34s %-34s %-34s %-34s\n", name, director, year, rating));
     }
 
     @Override

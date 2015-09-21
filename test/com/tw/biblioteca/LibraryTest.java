@@ -96,9 +96,9 @@ public class LibraryTest {
         library.printMovies();
 
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating") +
-                "Titanic\tJames Cameron\t1997\t8\n" +
-                "Pursuit Of Happyness\tGabriele Muccino\t2006\t8\n" +
-                "Inception\tChristopher Nolan\t2010\t8\n", byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s %-34s\n", "Titanic", "James Cameron", "1997", "8") +
+                String.format("%-34s %-34s %-34s %-34s\n", "Pursuit Of Happyness", "Gabriele Muccino", "2006", "8") +
+                String.format("%-34s %-34s %-34s %-34s\n", "Inception", "Christopher Nolan", "2010", "8"), byteArrayOutputStream.toString());
     }
 
     @Test
@@ -109,8 +109,8 @@ public class LibraryTest {
         library.printMovies();
 
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Name", "Year", "Director", "Rating") +
-                "Pursuit Of Happyness\tGabriele Muccino\t2006\t8\n" +
-                "Inception\tChristopher Nolan\t2010\t8\n", byteArrayOutputStream.toString());
+                String.format("%-34s %-34s %-34s %-34s\n", "Pursuit Of Happyness", "Gabriele Muccino", "2006", "8") +
+                String.format("%-34s %-34s %-34s %-34s\n", "Inception", "Christopher Nolan", "2010", "8"), byteArrayOutputStream.toString());
     }
 
     @Test
