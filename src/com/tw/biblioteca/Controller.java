@@ -1,6 +1,7 @@
 //delegates execution according to the option chosen by user
 package com.tw.biblioteca;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Controller {
@@ -31,7 +32,7 @@ public class Controller {
                 display.printString("You need to login for this\n");
                 }
                 else {
-                    new LibraryController(library).issueBook(currentUser);
+                    new LibraryController(library, new Display(new PrintStream(System.out))).issueBook(currentUser);
                 }
                 break;
             case "4":
@@ -39,18 +40,18 @@ public class Controller {
                     display.printString("You need to login for this\n");
                 }
                 else {
-                    new LibraryController(library).returnBook(currentUser);
+                    new LibraryController(library, new Display(new PrintStream(System.out))).returnBook(currentUser);
                 }
                 break;
             case "5":
                 library.printMovies();
                 break;
             case "6":
-                new LibraryController(library).issueMovie();
+                new LibraryController(library, new Display(new PrintStream(System.out))).issueMovie();
                 break;
             case "7":
                 if(currentUser.role().equals("guest")) {
-                    LoginInterface loginInterface = new LoginInterface(new Scanner(System.in));
+                    LoginInterface loginInterface = new LoginInterface(new Scanner(System.in), new Display(new PrintStream(System.out)));
                     currentUser = authenticator.isValid(loginInterface.libraryNumber(), loginInterface.password());
                 }
                 else

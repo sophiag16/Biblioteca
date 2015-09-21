@@ -5,15 +5,13 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
-import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.*;
 
 public class ControllerTest {
     private final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -33,20 +31,18 @@ public class ControllerTest {
 
     @Test
     public void shouldDisplayListOfBooksIfOptionOneIsChosen() {
-        Controller controller = new Controller("1", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Library library = mock(Library.class);
+        Controller controller = new Controller("1", library, new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
-        assertEquals(String.format("%-34s %-34s %-34s\n", "Name", "Author", "Year of Publishing") +
-                String.format("%-34s %-34s %-34s\n", "Harry Potter", "J K Rowling", "2001") +
-                String.format("%-34s %-34s %-34s\n", "To Kill A Mockingbird", "Harper Lee", "1970") +
-                String.format("%-34s %-34s %-34s\n\n", "A Brief History Of Time", "Stephen Hawking", "1988"), byteArrayOutputStream.toString());
+        verify(library, times(1)).printBooks();
     }
 
     @Test
     public void shouldExitIfOptionTwoIsChosen() {
         exit.expectSystemExit();
-        Controller controller = new Controller("2", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("2", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
         controller.dispatch();
     }
 
@@ -56,11 +52,11 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Controller controller = new Controller("3", library, new Authenticator(), new User("", "", "user", "", "", ""), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("3", library, new Authenticator(), new User("", "", "user", "", "", "", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
-        Mockito.verify(library, times(1)).removeBook(input, new User());
+        verify(library, times(1)).removeBook(input, new User());
     }
 
     @Test
@@ -69,22 +65,21 @@ public class ControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        Controller controller = new Controller("4", library, new Authenticator(), new User("", "", "user", "", "", ""), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("4", library, new Authenticator(), new User("", "", "user", "", "", "", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
-        Mockito.verify(library, times(1)).addBook(input, new User());
+        verify(library, times(1)).addBook(input, new User());
     }
 
     @Test
     public void shouldDisplayInvalidMessageWhenInvalidOptionIsChosen() {
-        String input = "1";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inContent);
-        Controller controller = new Controller("0", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Display display = mock(Display.class);
+        Controller controller = new Controller("0", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), display);
+
         controller.dispatch();
 
-        assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
+        verify(display, times(1)).printString("Invalid option\n");
     }
 
     @Test
@@ -94,7 +89,7 @@ public class ControllerTest {
 
         controller.dispatch();
 
-        Mockito.verify(library, times(1)).printMovies();
+        verify(library, times(1)).printMovies();
     }
 
     @Test
@@ -107,7 +102,7 @@ public class ControllerTest {
 
         controller.dispatch();
 
-        Mockito.verify(library, times(1)).removeMovie(input);
+        verify(library, times(1)).removeMovie(input);
     }
 
     @Test
@@ -116,11 +111,11 @@ public class ControllerTest {
         String input = "444-5678\n" + "arfgdfg";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Controller controller = new Controller("7", new Library(), authenticator, new User(), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("7", new Library(new Display(new PrintStream(System.out))), authenticator, new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
-        Mockito.verify(authenticator, times(1)).isValid("444-5678", "arfgdfg");
+        verify(authenticator, times(1)).isValid("444-5678", "arfgdfg");
     }
 
     @Test
@@ -128,14 +123,14 @@ public class ControllerTest {
         String input = "111-1111\n" + "abcxyz";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Controller controller = new Controller("7", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("7", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
-        assertEquals(true, new User("111-1111", "abcxyz", "user", "", "", "").equals(controller.dispatch()));
+        assertEquals(true, new User("111-1111", "abcxyz", "user", "", "", "", new Display(new PrintStream(System.out))).equals(controller.dispatch()));
     }
 
     @Test
     public void shouldDisplayLoginRequiredMessageToGuestUserForBookIssue() {
-        Controller controller = new Controller("3", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("3", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -144,7 +139,7 @@ public class ControllerTest {
 
     @Test
     public void shouldDisplayLoginRequiredMessageToGuestUserForBookReturn() {
-        Controller controller = new Controller("4", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("4", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
@@ -155,7 +150,7 @@ public class ControllerTest {
 
     @Test
     public void shouldReturnGuestUserIfLogoutOptionIsChosen() {
-        Controller controller = new Controller("7", new Library(), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", ""), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("7", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User("123-4325", "dgdfg", "user", "", "", "", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
 
         assertEquals(true, new User().equals(controller.dispatch()));
     }
@@ -163,25 +158,26 @@ public class ControllerTest {
     @Test
     public void shouldPrintBookInfoIfAdminChoosesOptionNine() {
         Library library = mock(Library.class);
-        Controller controller = new Controller("8", library, new Authenticator(), new User("", "", "admin", "", "", ""), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("8", library, new Authenticator(), new User("", "", "admin", "", "", "", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 
-        Mockito.verify(library, times(1)).printBookInfo();
+        verify(library, times(1)).printBookInfo();
     }
 
     @Test
     public void shouldPrintInvalidOptionIfNonAdminChoosesOptionNine() {
-        Controller controller = new Controller("8", new Library(), new Authenticator(), new User(), new Display(new PrintStream(System.out)));
+        Display display = mock(Display.class);
+        Controller controller = new Controller("8", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User(), display);
 
         controller.dispatch();
 
-        assertEquals("Invalid option", byteArrayOutputStream.toString().split("\n")[0]);
+        verify(display, times(1)).printString("Invalid option\n");
     }
 
     @Test
     public void shouldPrintUserInfoIfLoggedInUserChoosesOptionNine() {
-        Controller controller = new Controller("8", new Library(), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354"), new Display(new PrintStream(System.out)));
+        Controller controller = new Controller("8", new Library(new Display(new PrintStream(System.out))), new Authenticator(), new User("111-1111", "lj66409h", "user", "Sophia", "sophia@gmail.com", "9874375476354", new Display(new PrintStream(System.out))), new Display(new PrintStream(System.out)));
 
         controller.dispatch();
 

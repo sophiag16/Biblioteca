@@ -1,6 +1,8 @@
 //has user details and compares given details with its own
 package com.tw.biblioteca;
 
+import java.io.PrintStream;
+
 public class User {
     private String libraryNumber;
     private String password;
@@ -10,6 +12,7 @@ public class User {
     private String phone;
     private static final String defaultLibraryNumber = "";
     private static final String defaultPassword = "";
+    private Display display;
 
     public User() {
         this.libraryNumber = defaultLibraryNumber;
@@ -18,15 +21,17 @@ public class User {
         this.name = "";
         this.email = "";
         this.phone = "";
+        this.display = new Display(new PrintStream(System.out));
     }
 
-    public User(String libraryNumber, String password, String role, String name, String email, String phone) {
+    public User(String libraryNumber, String password, String role, String name, String email, String phone, Display display) {
         this.libraryNumber = libraryNumber;
         this.password = password;
         this.role = role;
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.display = display;
     }
 
     @Override
@@ -52,17 +57,12 @@ public class User {
     }
 
     public void printLibraryNumber() {
-        printString(String.format("%-34s ", libraryNumber, ""));
+        display.printString(String.format("%-34s ", libraryNumber, ""));
     }
 
     public void printInfo() {
-        printString("Name: " + name +
+        display.printString("Name: " + name +
                 "\nEmail: " + email +
                 "\nPhone: " + phone + "\n");
     }
-
-    private void printString(String stringToPrint) {
-        System.out.print(stringToPrint);
-    }
-
 }

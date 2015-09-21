@@ -23,7 +23,7 @@ public class LibraryTest {
 
     @Test
     public void shouldDisplayListOfBookInformation() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         library.printBooks();
 
@@ -35,7 +35,7 @@ public class LibraryTest {
 
     @Test
     public void shouldNotDisplayCheckedOutBooks() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         library.removeBook("Harry Potter", new User());
         library.printBooks();
@@ -47,21 +47,21 @@ public class LibraryTest {
 
     @Test
     public void shouldReturnTrueIfSuccessfullyIssued() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         assertEquals(true, library.removeBook("Harry Potter", new User()));
     }
 
     @Test
     public void shouldReturnFalseIfFailedToIssue() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         assertEquals(false, library.removeBook("Harry", new User()));
     }
 
     @Test
     public void shouldAgainDisplayReturnedBooks() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         library.removeBook("Harry Potter", new User());
         library.addBook("Harry Potter", new User());
@@ -75,7 +75,7 @@ public class LibraryTest {
 
     @Test
     public void shouldReturnTrueIfSuccessfullyReturned() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         library.removeBook("Harry Potter", new User());
 
@@ -84,14 +84,14 @@ public class LibraryTest {
 
     @Test
     public void shouldReturnFalseIfFailedToReturn() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         assertEquals(false, library.addBook("Harry", new User()));
     }
 
     @Test
     public void shouldDisplayListOfMovies() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         library.printMovies();
 
@@ -103,7 +103,7 @@ public class LibraryTest {
 
     @Test
     public void shouldNotDisplayCheckedOutMovies() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         library.removeMovie("Titanic");
         library.printMovies();
@@ -115,30 +115,30 @@ public class LibraryTest {
 
     @Test
     public void shouldReturnFalseIfFailedToCheckoutMovie() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         assertEquals(false, library.removeMovie("Godzilla"));
     }
 
     @Test
     public void shouldReturnTrueIfSuccessfullyCheckoutMovie() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
 
         assertEquals(true, library.removeMovie("Titanic"));
     }
 
     @Test
     public void shouldReturnFalseIfDifferentUserTriesToReturn() {
-        Library library = new Library();
+        Library library = new Library(new Display(new PrintStream(System.out)));
         library.removeBook("Harry Potter", new User());
 
-        assertEquals(false, library.addBook("Harry Potter", new User("345-1234", "", "", "", "", "")));
+        assertEquals(false, library.addBook("Harry Potter", new User("345-1234", "", "", "", "", "", new Display(new PrintStream(System.out)))));
     }
 
     @Test
     public void shouldPrintBookAndUserInfo() {
-        Library library = new Library();
-        library.removeBook("Harry Potter", new User("111-1111", "abcxyz", "user", "", "", ""));
+        Library library = new Library(new Display(new PrintStream(System.out)));
+        library.removeBook("Harry Potter", new User("111-1111", "abcxyz", "user", "", "", "", new Display(new PrintStream(System.out))));
         library.printBookInfo();
 
         assertEquals(String.format("%-34s %-34s %-34s %-34s\n", "Library No.", "Name", "Author", "Year of Publishing") +

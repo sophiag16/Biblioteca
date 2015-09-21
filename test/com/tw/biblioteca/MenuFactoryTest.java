@@ -42,7 +42,7 @@ public class MenuFactoryTest {
 
     @Test
     public void shouldDisplayMenuOptionsForAdmin() {
-        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "admin", "", "", ""));
+        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "admin", "", "", "", new Display(new PrintStream(System.out))));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -59,7 +59,7 @@ public class MenuFactoryTest {
 
     @Test
     public void shouldDisplayMenuOptionsForLoggedInUser() {
-        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "user", "", "", ""));
+        MenuFactory menuFactory = new MenuFactory(new User("000-0000", "secret", "user", "", "", "", new Display(new PrintStream(System.out))));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);

@@ -28,7 +28,7 @@ public class LoginInterfaceTest {
         String input = "111-1111";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        LoginInterface loginInterface = new LoginInterface(new Scanner(inContent));
+        LoginInterface loginInterface = new LoginInterface(new Scanner(inContent), new Display(new PrintStream(System.out)));
 
         assertEquals(input.toString(), loginInterface.libraryNumber().toString());
     }
@@ -38,7 +38,7 @@ public class LoginInterfaceTest {
         String input = "abcxyz";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        LoginInterface loginInterface = new LoginInterface(new Scanner(inContent));
+        LoginInterface loginInterface = new LoginInterface(new Scanner(inContent), new Display(new PrintStream(System.out)));
 
         assertEquals(input.toString(), loginInterface.password().toString());
     }

@@ -32,7 +32,7 @@ public class LibraryControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        LibraryController libraryController = new LibraryController(library);
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.issueBook(new User());
 
@@ -44,8 +44,8 @@ public class LibraryControllerTest {
         String input = "Harry Potter";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Library library = new Library();
-        LibraryController libraryController = new LibraryController(library);
+        Library library = new Library(new Display(new PrintStream(System.out)));
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.issueBook(new User());
 
@@ -58,8 +58,8 @@ public class LibraryControllerTest {
         String input = "Harry";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Library library = new Library();
-        LibraryController libraryController = new LibraryController(library);
+        Library library = new Library(new Display(new PrintStream(System.out)));
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.issueBook(new User());
 
@@ -73,7 +73,7 @@ public class LibraryControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        LibraryController libraryController = new LibraryController(library);
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.returnBook(new User());
 
@@ -87,7 +87,7 @@ public class LibraryControllerTest {
         System.setIn(inContent);
         Library library = mock(Library.class);
         when(library.addBook("Harry Potter", new User())).thenReturn(true);
-        LibraryController libraryController = new LibraryController(library);
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.returnBook(new User());
 
@@ -102,7 +102,7 @@ public class LibraryControllerTest {
         System.setIn(inContent);
         Library library = mock(Library.class);
         when(library.addBook("Harry", new User())).thenReturn(false);
-        LibraryController libraryController = new LibraryController(library);
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.returnBook(new User());
 
@@ -116,7 +116,7 @@ public class LibraryControllerTest {
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
         Library library = mock(Library.class);
-        LibraryController libraryController = new LibraryController(library);
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.issueMovie();
 
@@ -128,8 +128,8 @@ public class LibraryControllerTest {
         String input = "Titanic";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Library library = new Library();
-        LibraryController libraryController = new LibraryController(library);
+        Library library = new Library(new Display(new PrintStream(System.out)));
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.issueMovie();
 
@@ -142,8 +142,8 @@ public class LibraryControllerTest {
         String input = "Godzilla";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
-        Library library = new Library();
-        LibraryController libraryController = new LibraryController(library);
+        Library library = new Library(new Display(new PrintStream(System.out)));
+        LibraryController libraryController = new LibraryController(library, new Display(new PrintStream(System.out)));
 
         libraryController.issueMovie();
 

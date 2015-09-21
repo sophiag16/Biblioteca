@@ -28,7 +28,7 @@ public class MenuViewTest {
     public void shouldDisplayMenu() {
         ArrayList<String> menuOptions = new ArrayList<String>();
         menuOptions.add("1. Some Option");
-        MenuView menuView = new MenuView(menuOptions);
+        MenuView menuView = new MenuView(menuOptions, new Display(new PrintStream(System.out)));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
@@ -41,7 +41,7 @@ public class MenuViewTest {
     public void shouldReturnMenuOptionChosen() {
         ArrayList<String> menuOptions = new ArrayList<String>();
         menuOptions.add("1. Some Option");
-        MenuView menuView = new MenuView(menuOptions);
+        MenuView menuView = new MenuView(menuOptions, new Display(new PrintStream(System.out)));
         String input = "1";
         ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
         System.setIn(inContent);
