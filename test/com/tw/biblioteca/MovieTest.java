@@ -75,4 +75,9 @@ public class MovieTest {
 
         assertNotEquals(movie1.hashCode(), movie2.hashCode());
     }
+
+    @Test
+    public void sampleTest() {
+        asserEquals(1,2);
+    }
 }
