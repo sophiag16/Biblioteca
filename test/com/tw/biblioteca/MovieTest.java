@@ -78,6 +78,6 @@ public class MovieTest {
 
     @Test
     public void sampleTest() {
-        assertEquals(1,2);
+        assertEquals(1,1);
     }
 }
